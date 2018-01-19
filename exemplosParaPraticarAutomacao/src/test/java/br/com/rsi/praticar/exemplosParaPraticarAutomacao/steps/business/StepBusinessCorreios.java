@@ -41,7 +41,7 @@ public class StepBusinessCorreios {
 		if (page.element(page.getResultadoBusca()).containsText("DADOS ENCONTRADOS COM SUCESSO.")) {
 			List<WebElement> elementos = viewElement.findElements(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td"));
 			for (WebElement end : elementos) {
-				LOG.info(end.getText());
+				//LOG.info(end.getText());
 			}
 		}
 	}
