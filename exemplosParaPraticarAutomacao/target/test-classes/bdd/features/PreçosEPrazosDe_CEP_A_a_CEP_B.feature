@@ -10,7 +10,7 @@ Scenario Outline: carcular valor de uma entrega do CEP A até CEP B
 	And seleciono 'Tipo_de_serviço' "<tServico>"
 	And seleciono o 'Formato' "<formato>"
 	And seleciono 'Embalagem' "<embalagem>"
-		
+	#
 
 Examples:
 	|url									| opcao			|dataPostagem	|cepOrigem	|cepDestino	|tServico	|formato	|embalagem				|
