@@ -41,7 +41,7 @@ public class StepBusinessCorreios {
 		if (page.element(page.getResultadoBusca()).containsText("DADOS ENCONTRADOS COM SUCESSO.")) {
 			List<WebElement> elementos = viewElement.findElements(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td"));
 			for (WebElement end : elementos) {
-				//LOG.info(end.getText());
+				LOG.info(end.getText());
 			}
 		}
 	}
@@ -98,6 +98,25 @@ public class StepBusinessCorreios {
 	
 	public void inserirCepDestino(String cepDestino) {
 		viewElement.sendText(page.getCampoCepDestino(), cepDestino);
+	}
+
+	public void selecionarTipoServico(String tServico) {
+		viewElement.selectByVisibleText(page.getSelectServico(), tServico);
+	}
+
+	public void selecionarEmbalagem(String embalagem) {
+		viewElement.selectByVisibleText(page.getSelectEmbalagem(), embalagem);
+	}
+
+	public void selecionarFormato(String formato) {
+		List<WebElement> elementos = page.getFormatoPacote();
+		for(WebElement forma: elementos) {
+			if(forma.getAttribute("class").equals(formato)) {
+				viewElement.click(forma);
+				break;
+			}
+		}
+		page.waitFor(6).seconds();
 	}
 	
 

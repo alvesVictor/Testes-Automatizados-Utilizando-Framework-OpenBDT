@@ -33,6 +33,11 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name="servico")
 	private WebElement selectServico;
 	
+	@FindBy(xpath="//*[@id='spanFormato']/img")
+	private List<WebElement> formatoPacote;
+	
+	@FindBy(xpath="//*[@id=\"spanEmbalagemEnvelope\"]/label/select")
+	private WebElement selectEmbalagem;
 	
 	
 	public WebElement getCampoBusca() {
@@ -65,6 +70,14 @@ public class PageObjectClassCorreios extends PageObject{
 
 	public WebElement getSelectServico() {
 		return selectServico;
+	}
+
+	public List<WebElement> getFormatoPacote() {
+		return formatoPacote;
+	}
+
+	public WebElement getSelectEmbalagem() {
+		return selectEmbalagem;
 	}
 
 	

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Preços e prazos - de CEP A a CEP B" skipped="1" tests="1" time="9.37" timestamp="2018-01-19 11:37:18"><testcase name="carcular valor de uma entrega do CEP A até CEP B"><skipped/></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Preços e prazos - de CEP A a CEP B" skipped="0" tests="1" time="19.72" timestamp="2018-01-19 02:51:18"><testcase name="carcular valor de uma entrega do CEP A até CEP B"/></testsuite>

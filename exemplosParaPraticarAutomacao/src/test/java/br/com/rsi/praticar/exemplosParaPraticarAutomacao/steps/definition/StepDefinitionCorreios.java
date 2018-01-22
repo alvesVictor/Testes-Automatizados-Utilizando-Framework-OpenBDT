@@ -57,6 +57,17 @@ public class StepDefinitionCorreios {
 
 	@When("^seleciono 'Tipo_de_serviço' \"([^\"]*)\"$")
 	public void seleciono_Tipo_de_serviço(String tServico) throws Throwable {
+		stepB.selecionarTipoServico(tServico);
+	}
+	
+	@When("^seleciono o 'Formato' \"([^\"]*)\"$")
+	public void seleciono_o_Formato(String formato) throws Throwable {
+		stepB.selecionarFormato(formato);
+	}
+
+	@When("^seleciono 'Embalagem' \"([^\"]*)\"$")
+	public void seleciono_Embalagem(String embalagem) throws Throwable {
+		stepB.selecionarEmbalagem(embalagem);
 	}
 	//---------------- THEN-------------------
 	@Then("^verifico o resultado \"([^\"]*)\"$")
