@@ -115,8 +115,28 @@ public class StepBusinessCorreios {
 				viewElement.click(forma);
 				break;
 			}
+		}	
+	}
+
+	public void selecionarPeso(String peso) {
+		viewElement.selectByVisibleText(page.getSelectPeso(), peso);
+	}
+
+	public void selecionarTipoEmbalagem(String tipoEmbalagem) {
+		//LOG.info(page.getDivTipoEmbalagem());
+		while(!page.element(page.getDivTipoEmbalagem()).containsText(tipoEmbalagem)){
+			viewElement.click(page.getBtnNextTipo());
+			page.waitFor(3).seconds();
 		}
-		page.waitFor(6).seconds();
+		viewElement.click(page.getBtnSelecionarEmbalagem());
+	}
+
+	public void clicarBtnEnviar() {
+		viewElement.clickAndWait(page.getBtnEnviar(), 20);
+	}
+
+	public void verificarResultadoPrecoPrazo(String resul) {
+		Assert.assertTrue(page.containsAllText(resul));
 	}
 	
 

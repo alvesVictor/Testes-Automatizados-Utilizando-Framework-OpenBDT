@@ -39,6 +39,20 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(xpath="//*[@id=\"spanEmbalagemEnvelope\"]/label/select")
 	private WebElement selectEmbalagem;
 	
+	@FindBy(name="peso")
+	private WebElement selectPeso;
+	
+	@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[1]/a[2]")
+	private WebElement btnNextTipo;
+	
+	//@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div")
+	private By divTipoEmbalagem = By.xpath("//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div");
+	
+	@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div/p/button")
+	private WebElement btnSelecionarEmbalagem;
+	
+	@FindBy(name="Calcular")
+	private WebElement btnEnviar;
 	
 	public WebElement getCampoBusca() {
 		return campoBusca;
@@ -78,6 +92,26 @@ public class PageObjectClassCorreios extends PageObject{
 
 	public WebElement getSelectEmbalagem() {
 		return selectEmbalagem;
+	}
+
+	public WebElement getSelectPeso() {
+		return selectPeso;
+	}
+
+	public WebElement getBtnNextTipo() {
+		return btnNextTipo;
+	}
+
+	public By getDivTipoEmbalagem() {
+		return divTipoEmbalagem;
+	}
+
+	public WebElement getBtnSelecionarEmbalagem() {
+		return btnSelecionarEmbalagem;
+	}
+
+	public WebElement getBtnEnviar() {
+		return btnEnviar;
 	}
 
 	

@@ -69,6 +69,21 @@ public class StepDefinitionCorreios {
 	public void seleciono_Embalagem(String embalagem) throws Throwable {
 		stepB.selecionarEmbalagem(embalagem);
 	}
+	
+	@When("^seleciono 'Peso_estimado' \"([^\"]*)\"$")
+	public void seleciono_Peso_estimado(String peso) throws Throwable {
+		stepB.selecionarPeso(peso);
+	}
+
+	@When("^seleciono 'Tipo_de_embalagem' \"([^\"]*)\"$")
+	public void seleciono_Tipo_de_embalagem(String tipoEmbalagem) throws Throwable {
+		stepB.selecionarTipoEmbalagem(tipoEmbalagem);
+	}
+	
+	@When("^clico no botao 'Enviar'$")
+	public void clico_no_botao_Enviar() throws Throwable {
+		stepB.clicarBtnEnviar();
+	}
 	//---------------- THEN-------------------
 	@Then("^verifico o resultado \"([^\"]*)\"$")
 	public void verifico_o_resultado(String resul) throws Throwable {
@@ -78,5 +93,10 @@ public class StepDefinitionCorreios {
 	@Then("^verifico se foram encontrados os CEPs \"([^\"]*)\"$")
 	public void verifico_se_foram_encontrados_os_CEPs(String resul) throws Throwable {
 	    stepB.verificarCeps(resul);
+	}
+	
+	@Then("^verifico resultado do preco e prazo \"([^\"]*)\"$")
+	public void verifico_resultado_do_preco_e_prazo(String resul) throws Throwable {
+		stepB.verificarResultadoPrecoPrazo(resul);
 	}
 }

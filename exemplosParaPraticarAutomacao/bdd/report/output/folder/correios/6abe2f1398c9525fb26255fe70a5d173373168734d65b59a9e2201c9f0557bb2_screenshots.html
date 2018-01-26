@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="b68cd4399f352b6bb3257dea9ed4f14f23d01daf60439adce3618df3960d6d1e.html">Pre&ccedil;os E Prazos - De CEP A A CEP B</a>
+                > <a
+                    href="6abe2f1398c9525fb26255fe70a5d173373168734d65b59a9e2201c9f0557bb2.html">carcular valor de uma entrega do CEP A at&eacute; CEP B </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-01-2018 14:16</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Preços E Prazos - De CEP A A CEP B</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="e2a819bc54d15c3e47c3c14400089c42c331174fb4680638cd47656fc40632c9.html">Pre&ccedil;oseprazos
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Carcular Valor De Uma Entrega Do CEP A At&eacute; CEP B
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario"></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="scaled_ecdb15480084cbfeeb30429078cbb2626525aba18294759bd28d8cff9039a254.png" title="Given estou na pagina inicial &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="452f58e96c38e150c26a9ace15d8ab90ec4cf9277b82780ce089d3a49e06be56.png" title="When clico na opcao de servico &quot;&lt;opcao&gt;&quot;" width="960"/>
+                <img src="066c14dcf1f2711c1dc025a3dc63282d4e8d24bde102e115cea55e332b03df59.png" title="When clico na opcao de servico &quot;&lt;opcao&gt;&quot;" width="960"/>
+                <img src="7a80df9ef7ae370f9ba63f78d8af992d237c57d63e54c0c45912539b145c1a5b.png" title="And insiro data no campo 'Data_da_postagem' &quot;&lt;dataPostagem&gt;&quot;" width="960"/>
+                <img src="c125ff7c45fa61c171843f2651cc465266523a5ad74ccaf63e6934b0b2431771.png" title="And insiro no campo 'CEP_de_origem' &quot;&lt;cepOrigem&gt;&quot;" width="960"/>
+                <img src="d5cb0544d5b2834ac5a1bf9f5c0e21f657e202f6c1b6c88564e23dd510e02402.png" title="And insiro no campo 'CEP_de_destino' &quot;&lt;cepDestino&gt;&quot;" width="960"/>
+                <img src="f1ebd20f83ff440665c2e205144fd623d0d5a39584513320e2345da7aaa77bfd.png" title="And seleciono 'Tipo_de_servi&ccedil;o' &quot;&lt;tServico&gt;&quot;" width="960"/>
+                <img src="20a6a4acf18ffd259cfada6d5653746aedd47c3b1fa4d9dd0493e038264f76ab.png" title="And seleciono o 'Formato' &quot;&lt;formato&gt;&quot;" width="960"/>
+                <img src="a9e64152f9a362f37ebc6f02b00767250d50064f1b906c4f56a2987b988da463.png" title="And seleciono 'Embalagem' &quot;&lt;embalagem&gt;&quot;" width="960"/>
+                <img src="99b3053c81767f4c033b3324976a04e068785d263559aa6f01c5c780d3e6aa48.png" title="And seleciono 'Peso_estimado' &quot;&lt;peso&gt;&quot;" width="960"/>
+                <img src="57b61b24870555aa1289e18f2277c8dff32a3fe832a93204154f31fd34cc98cc.png" title="And seleciono 'Tipo_de_embalagem' &quot;&lt;tipoEmbalagem&gt;&quot;" width="960"/>
+                <img src="af342ce64bbd82026cef6a2682c9af79541612924a786c1092b015dfbc3412e8.png" title="And clico no botao 'Enviar'" width="960"/>
+                <img src="865907129950163a61b0d1957fabf2f46e3b5b49778d39990390783b471e0d7f.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="865907129950163a61b0d1957fabf2f46e3b5b49778d39990390783b471e0d7f.png" title="Then verifico resultado do preco e prazo &quot;&lt;resul&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
