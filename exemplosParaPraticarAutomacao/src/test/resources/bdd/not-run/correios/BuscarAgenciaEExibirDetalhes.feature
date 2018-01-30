@@ -9,6 +9,7 @@ Scenario Outline: Buscar Agencia
 	And seleciono o 'Municipio' "<municipio>"
 	And seleciono o 'Bairro' "<bairro>"
 	Then seleciono a agencia "<agencia>"
+
 	
 	
 Examples:
