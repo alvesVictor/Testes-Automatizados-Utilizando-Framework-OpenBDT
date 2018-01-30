@@ -54,6 +54,22 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name="Calcular")
 	private WebElement btnEnviar;
 	
+	//@FindBy(className="f2col")
+	private By radioBuscaAgencia = By.className("f2col");
+	
+	@FindBy(name="estadoAgencia")
+	private WebElement selectEstadoAgencia;
+	
+	@FindBy(name="municipioAgencia")
+	private WebElement selectMunicipioAgencia;
+	
+	@FindBy(name="bairroAgencia")
+	private WebElement selectBairroAgencia;
+	
+	//@FindBy(xpath= "//*[@id='tableNomeAgencia']/tbody/tr/td/a")
+	private By agencias = By.xpath("//*[@id='tableNomeAgencia']/tbody/tr/td/a");
+	
+	//-------- GETTERS ---------
 	public WebElement getCampoBusca() {
 		return campoBusca;
 	}
@@ -112,6 +128,26 @@ public class PageObjectClassCorreios extends PageObject{
 
 	public WebElement getBtnEnviar() {
 		return btnEnviar;
+	}
+
+	public By getRadioBuscaAgencia() {
+		return radioBuscaAgencia;
+	}
+
+	public WebElement getSelectEstadoAgencia() {
+		return selectEstadoAgencia;
+	}
+
+	public WebElement getSelectMunicipioAgencia() {
+		return selectMunicipioAgencia;
+	}
+
+	public WebElement getSelectBairroAgencia() {
+		return selectBairroAgencia;
+	}
+
+	public By getAgencias() {
+		return agencias;
 	}
 
 	

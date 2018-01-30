@@ -1,7 +1,7 @@
 Feature: Buscar Endereço (por CEP)
 
 
-@buscaCep
+@Correios
 Scenario Outline: Buscar usando CEP
 	Given estou na pagina inicial "<url>"
 	When preencho o campo 'Busca_CEP_ou_Endereço' "<cep/end>"

@@ -84,6 +84,26 @@ public class StepDefinitionCorreios {
 	public void clico_no_botao_Enviar() throws Throwable {
 		stepB.clicarBtnEnviar();
 	}
+	
+	@When("^seleciono 'Busca_agencia_por' \"([^\"]*)\"$")
+	public void seleciono_Busca_agencia_por(String buscaAgencia) throws Throwable {
+		stepB.selecionarBuscaAgencia(buscaAgencia);
+	}
+
+	@When("^seleciono o 'Estado' \"([^\"]*)\"$")
+	public void seleciono_o_Estado(String estado) throws Throwable {
+		stepB.selecionarEstado(estado);
+	}
+
+	@When("^seleciono o 'Municipio' \"([^\"]*)\"$")
+	public void seleciono_o_Municipio(String municipio) throws Throwable {
+		stepB.selecionarMunicipio(municipio);
+	}
+
+	@When("^seleciono o 'Bairro' \"([^\"]*)\"$")
+	public void seleciono_o_Bairro(String bairro) throws Throwable {
+		stepB.selecionarBairro(bairro);
+	}
 	//---------------- THEN-------------------
 	@Then("^verifico o resultado \"([^\"]*)\"$")
 	public void verifico_o_resultado(String resul) throws Throwable {
@@ -93,6 +113,11 @@ public class StepDefinitionCorreios {
 	@Then("^verifico se foram encontrados os CEPs \"([^\"]*)\"$")
 	public void verifico_se_foram_encontrados_os_CEPs(String resul) throws Throwable {
 	    stepB.verificarCeps(resul);
+	}
+	
+	@Then("^seleciono a agencia \"([^\"]*)\"$")
+	public void seleciono_a_agencia(String agencia) throws Throwable {
+		stepB.selecionoAgencia(agencia);
 	}
 	
 	@Then("^verifico resultado do preco e prazo \"([^\"]*)\"$")

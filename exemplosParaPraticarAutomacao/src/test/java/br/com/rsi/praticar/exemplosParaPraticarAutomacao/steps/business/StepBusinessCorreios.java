@@ -138,6 +138,45 @@ public class StepBusinessCorreios {
 	public void verificarResultadoPrecoPrazo(String resul) {
 		Assert.assertTrue(page.containsAllText(resul));
 	}
+
+	public void selecionarBuscaAgencia(String buscaAgencia) {
+		List <WebElement> elementos = viewElement.findElements(page.getRadioBuscaAgencia());
+		for(WebElement e: elementos) {
+			if(buscaAgencia.equals(e.getText())){
+				e.findElement(By.tagName("label")).click();
+				break;
+			}
+			//LOG.info(e.getText());
+		}
+	}
+
+	public void selecionarEstado(String estado) {
+		viewElement.click(page.getSelectEstadoAgencia());
+		viewElement.selectByVisibleText(page.getSelectEstadoAgencia(), estado);
+	}
+	
+	public void selecionarMunicipio(String muni) {
+		viewElement.click(page.getSelectMunicipioAgencia());
+		viewElement.selectByVisibleText(page.getSelectMunicipioAgencia(), muni);
+		page.waitFor(5).seconds();
+	}
+	
+	public void selecionarBairro(String bairro) {
+		viewElement.click(page.getSelectBairroAgencia());
+		viewElement.selectByVisibleText(page.getSelectBairroAgencia(), bairro);
+		page.waitFor(5).seconds();
+	}
+
+	public void selecionoAgencia(String agencia) {
+		List <WebElement> elementos = viewElement.findElements(page.getAgencias());
+		for(WebElement e: elementos) {
+			viewElement.mouseOver(e);
+			if(e.getText().contains(agencia)) {
+				viewElement.click(e);
+			}
+		}
+		page.waitFor(5).seconds();
+	}
 	
 
 }
