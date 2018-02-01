@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Buscar Agencia e exibir detalhes","Buscar Agencia","SUCCESS","2018-02-01T09:31:44.633-02:00","0.0","30.43"
+"Buscar Endereço (por CEP)","Buscar usando CEP","SUCCESS","2018-02-01T09:30:06.986-02:00","0.0","69.36"
+"Buscar CEP (por endereço)","Buscar usando Endereço","SUCCESS","2018-02-01T09:31:20.318-02:00","0.0","23.62"
+"Preços e prazos - de RSI Osasco a RSI Alphavile","carcular valor de uma entrega RSI Osasco a RSI Alphavile","SUCCESS","2018-02-01T09:32:15.386-02:00","0.0","27.84"
+"Preços e prazos - de CEP A a CEP B","carcular valor de uma entrega do CEP A até CEP B","SUCCESS","2018-02-01T09:32:43.932-02:00","0.0","23.73"

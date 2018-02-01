@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="adac9c7f336e292d54e1847c9eb1317305d8adeba5a4da03e1ffe0cda1230227.html">Pre&ccedil;os E Prazos - De RSI Osasco A RSI Al&hellip;</a>
+                > <a
+                    href="428471eab0b17f1d1f85981bf8b6c27c9d280687340a4f599deb50fd617f33c4.html">carcular valor de uma entrega RSI Osasco a RSI Alphavile </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-02-2018 09:32</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Preços E Prazos - De RSI Osasco A RSI Alphavile</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="c1e6f6bdcbac7d373c524617e0c75834600ffadf63711b680980c8b4e084a4c9.html">Correios
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Carcular Valor De Uma Entrega RSI Osasco A RSI Alphavile
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario"></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6013ef53e0ef9ebcb6a16401f1d89abb960edbb0652cb65cd3a98f9dd6dda756.png" title="Given estou na pagina inicial &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="be3973c124cf5d441ff73e880cf9bf0c844f7d293c9bc4f22ee2d64a9cdfec6f.png" title="When clico na opcao de servico &quot;&lt;opcao&gt;&quot;" width="960"/>
+                <img src="7a425137989969434050de09bfdfaacb0f3a59873a66aad5df3616abcd939945.png" title="And insiro data no campo 'Data_da_postagem' &quot;&lt;dataPostagem&gt;&quot;" width="960"/>
+                <img src="17f6335201d3fa1f98a4e26823e191bbc3cb8625578ebba28e5f24e1113bba4a.png" title="And insiro no campo 'CEP_de_origem' &quot;&lt;cepOrigem&gt;&quot;" width="960"/>
+                <img src="0dbce86e973ede649e5b4673c420d2e27c616bba3786fd9ead042473ce265c9c.png" title="And insiro no campo 'CEP_de_destino' &quot;&lt;cepDestino&gt;&quot;" width="960"/>
+                <img src="c9d5bab57596db69d678e03efbfe7bcc664de8e444271bab9c6f5aff2347c783.png" title="And seleciono 'Tipo_de_servi&ccedil;o' &quot;&lt;tServico&gt;&quot;" width="960"/>
+                <img src="d5c50f03a42afee4d0b22651b59c560e6a677dd5d2109ae68ea986cd257be7d7.png" title="And seleciono o 'Formato' &quot;&lt;formato&gt;&quot;" width="960"/>
+                <img src="c08fe5687ba016932ace0f2dae89d383dd15944bf4ec64119542e2b1be74e9b0.png" title="And seleciono 'Embalagem' &quot;&lt;embalagem&gt;&quot;" width="960"/>
+                <img src="11d86b147e830a69c8f85acd21eca6ee26e108d7b7f85d04471f67fd0119ef8e.png" title="And seleciono 'Peso_estimado' &quot;&lt;peso&gt;&quot;" width="960"/>
+                <img src="fdda0b8d98e1ce7ed1a2a6a0e61950e537ef484ed9f3dbd7ffc3f200fd7ea17c.png" title="And seleciono 'Tipo_de_embalagem' &quot;&lt;tipoEmbalagem&gt;&quot;" width="960"/>
+                <img src="af342ce64bbd82026cef6a2682c9af79541612924a786c1092b015dfbc3412e8.png" title="And clico no botao 'Enviar'" width="960"/>
+                <img src="4e7dc3b8a6f2e8ed5644a130c790939dd0f3a46287055bf011641b227a13621f.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="4e7dc3b8a6f2e8ed5644a130c790939dd0f3a46287055bf011641b227a13621f.png" title="Then verifico resultado do preco e prazo &quot;&lt;resul&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
