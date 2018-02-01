@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Adicionar ao carrinho um item da seção Produtos Reembalados" skipped="0" tests="1" time="22.93" timestamp="2018-02-32 10:23:17"><testcase name="Adicionar ao carrinho um item da seção Produtos Reembalados"><error message="Index: 2, Size: 1" type="java.lang.IndexOutOfBoundsException">Index: 2, Size: 1</error><system-err>Index: 2, Size: 1&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.business.StepBusinessSouBarato.selecionarIten(StepBusinessSouBarato.java:40)&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.definition.StepDefinitionSouBarato.seleciono_iten(StepDefinitionSouBarato.java:32)&#13;
+io.openbdt.run.SuiteTestRunner.runWithJunit(SuiteTestRunner.java:21)&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.runner.RunnerTest.test(RunnerTest.java:33)&#13;
+org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)&#13;
+org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)&#13;
+org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;
+org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;
+</system-err></testcase></testsuite>
