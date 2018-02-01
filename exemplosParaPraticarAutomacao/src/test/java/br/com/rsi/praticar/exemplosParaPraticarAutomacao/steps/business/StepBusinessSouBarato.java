@@ -51,7 +51,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void confirmarCompra() {
-		viewElement.click(page.getBtnConfirmarCompra());
+		viewElement.click(page.getBtnConfirmarCompraReembalado());
 	}
 	
 	public void clicarBtnContinuar() {
@@ -61,6 +61,32 @@ public class StepBusinessSouBarato {
 	public void verificoProdutoAdd() {
 		LOG.info(page.getCampoQtdProduto().getText());
 		assumeTrue(page.element(page.getCampoQtdProduto()).containsText("1"));
+	}
+
+	public void clicarNoMenu() {
+		viewElement.mouseOver(page.getBtnMenu());
+	}
+
+	public void selecionarCategoria(String cate) {
+		viewElement.mouseOver(viewElement.findElement(By.linkText(cate)));
+	}
+
+	public void selecionarSubCategoria(String subCate) {
+		viewElement.findElement(By.linkText(subCate)).click();
+	}
+
+	public void selecionarFiltroBusca(String filtro) {
+		viewElement.findElement(By.linkText(filtro)).click();
+	}
+
+	public void clicarNaGeladeira(Integer posicao) {
+		List<WebElement> elementos = page.getListaGeladeiras();
+		WebElement geladeira = elementos.get(posicao-1);
+		viewElement.click(geladeira);
+	}
+
+	public void confirmarCompraGeladeira() {
+		viewElement.click(page.getBtnConfirmarCompra());
 	}
 
 

@@ -20,13 +20,22 @@ public class PageObjectClassSouBarato extends PageObject{
 	private WebElement btnComprar;
 	
 	@FindBy(id="product-selected-buy-continue")
-	private WebElement btnConfirmarCompra;
+	private WebElement btnConfirmarCompraReembalado;
 	
 	@FindBy(xpath="//*[@id='containerpage']/form/div[2]/div[2]/div/div[2]/button")
 	private WebElement btnContinuar;
 	
 	@FindBy(xpath="//*[@id='app']/section/article/div[2]/div[2]/div/div/table/tbody/tr[1]/td[1]")
 	private WebElement campoQtdProduto;
+	
+	@FindBy(id="main-header-menu-toggle")
+	private WebElement btnMenu;
+	
+	@FindBy(xpath="//*[@id='containerpage']/div[5]/div/div/div[2]/section/ul/li/section")
+	private List<WebElement> listaGeladeiras;
+	
+	@FindBy(id="product-selected-buy-continue")
+	private WebElement btnConfirmarCompra;
 	
 	// --------- GETTERS -----------
 	public WebElement getPopUpInicial() {
@@ -46,6 +55,15 @@ public class PageObjectClassSouBarato extends PageObject{
 	}
 	public WebElement getBtnContinuar() {
 		return btnContinuar;
+	}
+	public WebElement getBtnMenu() {
+		return btnMenu;
+	}
+	public List<WebElement> getListaGeladeiras() {
+		return listaGeladeiras;
+	}
+	public WebElement getBtnConfirmarCompraReembalado() {
+		return btnConfirmarCompraReembalado;
 	}
 
 	

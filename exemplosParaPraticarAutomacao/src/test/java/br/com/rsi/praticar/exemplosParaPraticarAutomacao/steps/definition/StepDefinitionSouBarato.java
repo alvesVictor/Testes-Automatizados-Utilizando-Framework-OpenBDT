@@ -47,6 +47,36 @@ public class StepDefinitionSouBarato {
 		stepB.clicarBtnContinuar();
 	}
 	
+	@When("^clico em 'MENU'$")
+	public void clico_em_MENU() throws Throwable {
+		stepB.clicarNoMenu();
+	}
+
+	@When("^seleciono a 'categoria' \"([^\"]*)\"$")
+	public void seleciono_a_categoria(String cate) throws Throwable {
+		stepB.selecionarCategoria(cate);
+	}
+
+	@When("^seleciono a 'subCategoria' \"([^\"]*)\"$")
+	public void seleciono_a_subCategoria(String subCate) throws Throwable {
+		stepB.selecionarSubCategoria(subCate);
+	}
+	
+	@When("^seleciono o filtro de busca \"([^\"]*)\"$")
+	public void seleciono_o_filtro_de_busca(String filtro) throws Throwable {
+		stepB.selecionarFiltroBusca(filtro);
+	}
+
+	@When("^clico em uma geladeira \"([^\"]*)\"$")
+	public void clico_em_uma_geladeira(Integer posicao) throws Throwable {
+		stepB.clicarNaGeladeira(posicao);	
+	}
+	
+	@When("^confirmo compra geladeira$")
+	public void confirmo_compra_geladeira() throws Throwable {
+		stepB.confirmarCompraGeladeira();
+	}
+	
 	//------- THEN ---------
 	@Then("^verifico se o produto foi adicionado no carrinho$")
 	public void verifico_se_o_produto_foi_adicionado_no_carrinho() throws Throwable {

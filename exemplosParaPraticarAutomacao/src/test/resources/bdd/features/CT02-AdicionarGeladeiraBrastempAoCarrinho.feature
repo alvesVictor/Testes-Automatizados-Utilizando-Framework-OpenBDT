@@ -3,11 +3,15 @@ Feature: Adicionar geladeira Brastemp ao carrinho(obs: Navegar até a seção ge
 @souBarato
 Scenario Outline: Adicionar geladeira Brastemp ao carrinho
 	Given estou na pagina inicial souBarato"<url>"
-
-
-
+	When clico em 'MENU'
+	And seleciono a 'categoria' "<categ>"
+	And seleciono a 'subCategoria' "<subCateg>"
+	And seleciono o filtro de busca "<filtro>"
+	And clico em uma geladeira "<posicao>"
+	And clico no botao 'COMPRAR'
+	Then verifico se o produto foi adicionado no carrinho
+	
 	
 Examples:
-	|url							|opcao					|item	|
-	|http://www.soubarato.com.br	|Produtos Reembalados	|1		|
-	
+	|url							|categ				|subCateg				|filtro		|posicao|
+	|http://www.soubarato.com.br	|Eletrodomésticos	|Geladeiras e Freezeres	|Brastemp	|5		|
