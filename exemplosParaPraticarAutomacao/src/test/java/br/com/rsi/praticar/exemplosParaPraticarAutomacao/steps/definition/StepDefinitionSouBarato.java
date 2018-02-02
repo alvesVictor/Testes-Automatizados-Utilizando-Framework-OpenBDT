@@ -37,9 +37,9 @@ public class StepDefinitionSouBarato {
 		stepB.clicarBtnCompra();
 	}
 
-	@When("^confirmo compra$")
+	@When("^confirmo compra reembalado$")
 	public void confirmo_compra() throws Throwable {
-		stepB.confirmarCompra();
+		stepB.confirmarCompraReembalado();
 	}
 	
 	@When("^clico no botao 'CONTINUAR'$")
@@ -75,6 +75,16 @@ public class StepDefinitionSouBarato {
 	@When("^confirmo compra geladeira$")
 	public void confirmo_compra_geladeira() throws Throwable {
 		stepB.confirmarCompraGeladeira();
+	}
+	
+	@When("^insiro no campo de busca \"([^\"]*)\"$")
+	public void insiro_no_campo_de_busca(String busca) throws Throwable {
+		stepB.inserirNoCampoBusca(busca);
+	}
+
+	@When("^seleciono o iphone desejado \"([^\"]*)\"$")
+	public void seleciono_o_iphone_desejado(String item) throws Throwable {
+		stepB.selecionarIphoneDesejado(item);
 	}
 	
 	//------- THEN ---------

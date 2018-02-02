@@ -50,7 +50,7 @@ public class StepBusinessSouBarato {
 		viewElement.click(page.getBtnComprar());
 	}
 
-	public void confirmarCompra() {
+	public void confirmarCompraReembalado() {
 		viewElement.click(page.getBtnConfirmarCompraReembalado());
 	}
 	
@@ -87,6 +87,23 @@ public class StepBusinessSouBarato {
 
 	public void confirmarCompraGeladeira() {
 		viewElement.click(page.getBtnConfirmarCompra());
+	}
+
+	public void inserirNoCampoBusca(String busca) {
+		viewElement.sendText(page.getCampoBusca(), busca);
+		viewElement.submit(page.getCampoBusca());
+	}
+
+	public void selecionarIphoneDesejado(String item) {
+		page.waitFor(page.getDivResultadoBusca()).isPresent();
+		List<WebElement> elementos = page.getListaIphone();
+		for(WebElement ele: elementos) {
+			LOG.info(ele.getText());
+			if(ele.getText().contains(item)){
+				viewElement.click(ele);
+				break;
+			}
+		}
 	}
 
 
