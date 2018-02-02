@@ -43,8 +43,19 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath="//*[@id='containerpage']/div[1]/div/div[1]/h1")
 	private WebElement divResultadoBusca;
 	
-	@FindBy(xpath=" //*[@id='containerpage']/div[1]/div/div[2]/section/ul/li/section")
+	@FindBy(xpath="//*[@id='containerpage']/div[1]/div/div[2]/section/ul/li/section")
 	private List<WebElement> listaIphone;
+	
+	@FindBy(xpath="//*[@id='containerpage']/div[3]/div/div/div[1]/ul/li[2]/a")
+	private WebElement linkVantagens;
+	
+	@FindBy(xpath="//*[@id=\"containerpage\"]/div[3]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+	private WebElement linkConhecaVantagens;
+	
+	@FindBy(xpath="//*[@id='vantagens-cartoes']/h3")
+	private WebElement resultadoCartao;
+	
+	
 	
 	// --------- GETTERS -----------
 	public WebElement getPopUpInicial() {
@@ -82,6 +93,15 @@ public class PageObjectClassSouBarato extends PageObject{
 	}
 	public List<WebElement> getListaIphone() {
 		return listaIphone;
+	}
+	public WebElement getLinkVantagens() {
+		return linkVantagens;
+	}
+	public WebElement getLinkConhecaVantagens() {
+		return linkConhecaVantagens;
+	}
+	public WebElement getResultadoCartao() {
+		return resultadoCartao;
 	}
 
 	

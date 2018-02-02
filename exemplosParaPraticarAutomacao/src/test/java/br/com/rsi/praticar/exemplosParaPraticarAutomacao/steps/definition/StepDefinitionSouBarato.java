@@ -87,9 +87,24 @@ public class StepDefinitionSouBarato {
 		stepB.selecionarIphoneDesejado(item);
 	}
 	
+	@When("^clico no link 'VANTAGENS'$")
+	public void clico_no_link_VANTAGENS() throws Throwable {
+	    stepB.clicarLinkVantagens();
+	}
+
+	@When("^clico na opcao 'Conheca_as_vantagens'$")
+	public void clico_na_opcao_Conheca_as_vantagens() throws Throwable {
+		stepB.clicarOpcaoConhecaVantagens();
+	}
+
 	//------- THEN ---------
 	@Then("^verifico se o produto foi adicionado no carrinho$")
 	public void verifico_se_o_produto_foi_adicionado_no_carrinho() throws Throwable {
 	    stepB.verificoProdutoAdd();
+	}
+	
+	@Then("^verifico resposta$")
+	public void verifico_resposta() throws Throwable {
+	    stepB.verificarResultadoCartao();
 	}
 }

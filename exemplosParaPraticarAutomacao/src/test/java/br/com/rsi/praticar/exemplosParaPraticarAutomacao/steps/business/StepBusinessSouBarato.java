@@ -106,6 +106,19 @@ public class StepBusinessSouBarato {
 		}
 	}
 
+	public void clicarLinkVantagens() {
+		viewElement.mouseOver(page.getLinkVantagens());
+	}
+
+	public void clicarOpcaoConhecaVantagens() {
+		viewElement.click(page.getLinkConhecaVantagens());
+	}
+
+	public void verificarResultadoCartao() {
+		LOG.info(page.getResultadoCartao().getText());
+		Assert.assertTrue(page.getResultadoCartao().getText().contains("CONHEÇA AS VANTAGENS"));
+	}
+
 
 
 
