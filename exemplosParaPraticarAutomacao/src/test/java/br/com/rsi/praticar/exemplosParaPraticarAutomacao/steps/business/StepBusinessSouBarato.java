@@ -119,6 +119,17 @@ public class StepBusinessSouBarato {
 		Assert.assertTrue(page.getResultadoCartao().getText().contains("CONHEÇA AS VANTAGENS"));
 	}
 
+	public void inserirCep(String cep) {
+		viewElement.waitForElementIsPresent(10, page.getCampoCep());
+		viewElement.sendText(page.getCampoCep(), cep);
+		viewElement.click(page.getBtnCep());
+	}
+
+	public void verirficarCalculoFrete() {
+		page.waitFor(5).seconds();
+		Assert.assertTrue(page.containsText("Confira abaixo o prazo de entrega e o valor do frete para o CEP"));
+	}
+
 
 
 

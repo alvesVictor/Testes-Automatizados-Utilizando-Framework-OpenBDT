@@ -55,6 +55,14 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath="//*[@id='vantagens-cartoes']/h3")
 	private WebElement resultadoCartao;
 	
+	@FindBy(id="cep")
+	private WebElement campoCep;
+	
+	@FindBy(id="calculate-freight-button")
+	private WebElement btnCep;
+	
+	
+	
 	
 	
 	// --------- GETTERS -----------
@@ -102,6 +110,12 @@ public class PageObjectClassSouBarato extends PageObject{
 	}
 	public WebElement getResultadoCartao() {
 		return resultadoCartao;
+	}
+	public WebElement getCampoCep() {
+		return campoCep;
+	}
+	public WebElement getBtnCep() {
+		return btnCep;
 	}
 
 	

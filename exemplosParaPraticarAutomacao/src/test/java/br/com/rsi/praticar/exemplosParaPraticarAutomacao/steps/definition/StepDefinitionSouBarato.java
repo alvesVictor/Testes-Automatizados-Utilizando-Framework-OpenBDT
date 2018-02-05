@@ -38,7 +38,7 @@ public class StepDefinitionSouBarato {
 	}
 
 	@When("^confirmo compra reembalado$")
-	public void confirmo_compra() throws Throwable {
+	public void confirmo_compra_reembalado() throws Throwable {
 		stepB.confirmarCompraReembalado();
 	}
 	
@@ -97,10 +97,21 @@ public class StepDefinitionSouBarato {
 		stepB.clicarOpcaoConhecaVantagens();
 	}
 
+	@When("^insiro bo campo 'CEP' \"([^\"]*)\"$")
+	public void insiro_bo_campo_CEP(String cep) throws Throwable {
+		stepB.inserirCep(cep);
+	}
+
 	//------- THEN ---------
 	@Then("^verifico se o produto foi adicionado no carrinho$")
 	public void verifico_se_o_produto_foi_adicionado_no_carrinho() throws Throwable {
 	    stepB.verificoProdutoAdd();
+	}
+	
+
+	@Then("^verifico se foi calculado o frete$")
+	public void verifico_se_foi_calculado_o_frete() throws Throwable {
+		stepB.verirficarCalculoFrete();
 	}
 	
 	@Then("^verifico resposta$")
