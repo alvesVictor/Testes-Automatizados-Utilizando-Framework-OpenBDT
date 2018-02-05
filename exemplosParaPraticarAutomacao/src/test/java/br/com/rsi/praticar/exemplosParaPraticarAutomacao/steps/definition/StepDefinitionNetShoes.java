@@ -17,4 +17,39 @@ public class StepDefinitionNetShoes {
 	@Steps
 	StepBusinessNetShoes stepB;
 	
+	@Given("^estou na pagina inicial netShoes \"([^\"]*)\"$")
+	public void estou_na_pagina_inicial_netShoes(String url) throws Throwable {
+		stepB.openHome(url);
+	}
+
+	@When("^seleciono a opcao do menu \"([^\"]*)\"$")
+	public void seleciono_a_opcao_do_menu(String opcao) throws Throwable {
+		stepB.selecionarOpcaoMenu(opcao);
+	}
+
+	@When("^seleciono o tipo de calcado \"([^\"]*)\"$")
+	public void seleciono_o_tipo_de_calcado(String tipo) throws Throwable {
+		stepB.selecionarTipoCalcado(tipo);
+	}
+	@When("^seleciono o tenis \"([^\"]*)\"$")
+	public void seleciono_o_tenis(String tenis) throws Throwable {
+		stepB.selecionarTenis(tenis);
+	}
+	
+	@When("^seleciono o tamanho do tenis \"([^\"]*)\"$")
+	public void seleciono_o_tamanho_do_tenis(String tam) throws Throwable {
+		stepB.selecionarTamanhoTenis(tam);
+	}
+
+	@When("^clico no botao ' COMPRAR'$")
+	public void clico_no_botao_COMPRAR() throws Throwable {
+	    stepB.clicarBtnComprar();
+	}
+	
+	
+	@Then("^verifico se o tenis foi adicionado ao carrinho \"([^\"]*)\"$")
+	public void verifico_se_o_tenis_foi_adicionado_ao_carrinho(String tenis) throws Throwable {
+		stepB.verificarTenisNoCarrinho(tenis);
+	}
+
 }

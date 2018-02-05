@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: br.com.rsi.praticar.exemplosParaPraticarAutomacao.runner.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 100.194 s - in br.com.rsi.praticar.exemplosParaPraticarAutomacao.runner.RunnerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 86.167 s - in br.com.rsi.praticar.exemplosParaPraticarAutomacao.runner.RunnerTest
