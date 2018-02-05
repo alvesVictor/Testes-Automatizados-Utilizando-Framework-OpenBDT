@@ -13,7 +13,7 @@ ___________________________________________________________________________
 ```
 
 ##### - Rodando o teste.
-- Execute o runner.java que se localiza no seguinte caminho:
+- Execute o RunnerTest.java que se localiza no seguinte caminho:
 
 ```sh
     exemplosParaPraticarAutomacao\src\test\java\br\com\rsi\praticar\exemplosParaPraticarAutomacao\runner
