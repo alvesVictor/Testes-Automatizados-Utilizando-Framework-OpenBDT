@@ -36,9 +36,9 @@ public class StepDefinitionNetShoes {
 		stepB.selecionarTenis(tenis);
 	}
 	
-	@When("^seleciono o tamanho do tenis \"([^\"]*)\"$")
-	public void seleciono_o_tamanho_do_tenis(String tam) throws Throwable {
-		stepB.selecionarTamanhoTenis(tam);
+	@When("^seleciono o tamanho \"([^\"]*)\"$")
+	public void seleciono_o_tamanho(String tam) throws Throwable {
+		stepB.selecionarTamanho(tam);
 	}
 
 	@When("^clico no botao ' COMPRAR'$")
@@ -46,10 +46,19 @@ public class StepDefinitionNetShoes {
 	    stepB.clicarBtnComprar();
 	}
 	
+	@When("^insiro no campo de busca netShoes \"([^\"]*)\"$")
+	public void insiro_no_campo_de_busca_netShoes(String busca) throws Throwable {
+		stepB.inserirCampoBusca(busca);
+	}
 	
-	@Then("^verifico se o tenis foi adicionado ao carrinho \"([^\"]*)\"$")
-	public void verifico_se_o_tenis_foi_adicionado_ao_carrinho(String tenis) throws Throwable {
-		stepB.verificarTenisNoCarrinho(tenis);
+	@When("^seleciono a camisa de selecao brasileira \"([^\"]*)\"$")
+	public void seleciono_a_camisa_de_selecao_brasileira(String camisa) throws Throwable {
+		stepB.selecionarCamisaSelecao(camisa);
+	}
+	
+	@Then("^verifico se o item foi adicionado ao carrinho netShoes \"([^\"]*)\"$")
+	public void verifico_se_o_item_foi_adicionado_ao_carrinho_netShoes(String item) throws Throwable {
+		stepB.verificarItemNoCarrinho(item);
 	}
 
 }

@@ -19,10 +19,18 @@ public class PageObjectClassNetshoes extends PageObject{
 	private WebElement btnComprar;
 	
 	@FindBy(xpath="/html/body/div[3]/div[2]/div[1]/div[3]/div/form/div[4]/ul/li")
-	private List<WebElement> tamanhosTenis;
+	private List<WebElement> tamanhos;
 	
 	@FindBy(className="product-line")
 	private WebElement carrinho;
+	
+	@FindBy(id="search")
+	private WebElement campoBusca;
+	
+	@FindBy(xpath="//*[@id='search-linx']/div[6]/div[2]/ul[2]/li")
+	private List<WebElement> listaCamisaSelecao;
+	
+	
 	
 	public WebElement getGetCalcadoscategorias() {
 		return getCalcadoscategorias;
@@ -36,12 +44,20 @@ public class PageObjectClassNetshoes extends PageObject{
 		return btnComprar;
 	}
 
-	public List<WebElement> getTamanhosTenis() {
-		return tamanhosTenis;
+	public List<WebElement> getTamanhos() {
+		return tamanhos;
 	}
 
 	public WebElement getCarrinho() {
 		return carrinho;
+	}
+
+	public WebElement getCampoBusca() {
+		return campoBusca;
+	}
+
+	public List<WebElement> getListaCamisaSelecao() {
+		return listaCamisaSelecao;
 	}
 
 

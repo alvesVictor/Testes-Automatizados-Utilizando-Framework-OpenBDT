@@ -51,8 +51,8 @@ public class StepBusinessNetShoes {
 		}
 	}
 
-	public void selecionarTamanhoTenis(String tam) {
-		List<WebElement> elementos = page.getTamanhosTenis();
+	public void selecionarTamanho(String tam) {
+		List<WebElement> elementos = page.getTamanhos();
 		for(WebElement ele: elementos) {
 			//LOG.info(ele.getText());
 			if(ele.getText().contains(tam)){
@@ -66,8 +66,24 @@ public class StepBusinessNetShoes {
 		viewElement.click(page.getBtnComprar());
 	}
 
-	public void verificarTenisNoCarrinho(String tenis) {
-		assertTrue(page.element(page.getCarrinho()).containsText(tenis));
+	public void verificarItemNoCarrinho(String Item) {
+		assertTrue(page.containsText(Item));
+	}
+
+	public void inserirCampoBusca(String busca) {
+		viewElement.sendText(page.getCampoBusca(), busca);
+		viewElement.submit(page.getCampoBusca());
+	}
+
+	public void selecionarCamisaSelecao(String camisa) {
+		List<WebElement> elementos = page.getListaCamisaSelecao();
+		for(WebElement ele:elementos) {
+			//LOG.info(ele.getText());
+			if(ele.getText().contains(camisa)) {
+				ele.click();
+				break;
+			}
+		}
 	}
 
 
