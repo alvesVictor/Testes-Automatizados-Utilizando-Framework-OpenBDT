@@ -52,9 +52,10 @@ public class StepBusinessNetShoes {
 	}
 
 	public void selecionarTamanho(String tam) {
+		page.waitFor(3).seconds();
 		List<WebElement> elementos = page.getTamanhos();
 		for(WebElement ele: elementos) {
-			//LOG.info(ele.getText());
+			LOG.info(ele.getText());
 			if(ele.getText().contains(tam)){
 				ele.click();
 				break;
@@ -84,6 +85,14 @@ public class StepBusinessNetShoes {
 				break;
 			}
 		}
+	}
+
+	public void selecionarOpcaoOutlet(String opcao) {
+		viewElement.findElement(By.linkText(opcao)).click();
+	}
+
+	public void selecinarfaixaPreco() {
+		viewElement.click(page.getRadiBtnPreco());
 	}
 
 

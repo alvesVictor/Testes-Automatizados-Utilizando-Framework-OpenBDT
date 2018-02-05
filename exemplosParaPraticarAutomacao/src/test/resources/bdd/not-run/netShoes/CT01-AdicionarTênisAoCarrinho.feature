@@ -14,4 +14,4 @@ Scenario Outline: Adicionar tênis ao carrinho
 
 Examples:
 	|url						|opcao		|tipo	|tenis										|tam	|
-	|http://www.netshoes.com.br/|CALÇADOS	|Tênis	|Tênis Nike Air Epic Speed TR 2 Masculino	|41		|
+	|http://www.netshoes.com.br/|CALÇADOS	|Tênis	|Tênis Diadora Mission Masculino			|41		|

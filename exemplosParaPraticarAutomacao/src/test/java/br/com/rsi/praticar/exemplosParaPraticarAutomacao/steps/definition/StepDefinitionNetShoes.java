@@ -56,6 +56,15 @@ public class StepDefinitionNetShoes {
 		stepB.selecionarCamisaSelecao(camisa);
 	}
 	
+	@When("^seleciono opcao de outlet \"([^\"]*)\"$")
+	public void seleciono_opcao_de_outlet(String opcao) throws Throwable {
+		stepB.selecionarOpcaoOutlet(opcao);
+	}
+
+	@When("^seleciono faixa de preco$")
+	public void seleciono_faixa_de_preco() throws Throwable {
+		stepB.selecinarfaixaPreco();
+	}
 	@Then("^verifico se o item foi adicionado ao carrinho netShoes \"([^\"]*)\"$")
 	public void verifico_se_o_item_foi_adicionado_ao_carrinho_netShoes(String item) throws Throwable {
 		stepB.verificarItemNoCarrinho(item);

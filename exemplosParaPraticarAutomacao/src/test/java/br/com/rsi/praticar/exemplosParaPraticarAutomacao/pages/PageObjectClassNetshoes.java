@@ -30,6 +30,9 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(xpath="//*[@id='search-linx']/div[6]/div[2]/ul[2]/li")
 	private List<WebElement> listaCamisaSelecao;
 	
+	@FindBy(xpath="/html/body/div[3]/div[4]/aside/div/div[9]/div/ul/li[2]/a/input")
+	private WebElement radiBtnPreco;
+	
 	
 	
 	public WebElement getGetCalcadoscategorias() {
@@ -58,6 +61,10 @@ public class PageObjectClassNetshoes extends PageObject{
 
 	public List<WebElement> getListaCamisaSelecao() {
 		return listaCamisaSelecao;
+	}
+
+	public WebElement getRadiBtnPreco() {
+		return radiBtnPreco;
 	}
 
 
