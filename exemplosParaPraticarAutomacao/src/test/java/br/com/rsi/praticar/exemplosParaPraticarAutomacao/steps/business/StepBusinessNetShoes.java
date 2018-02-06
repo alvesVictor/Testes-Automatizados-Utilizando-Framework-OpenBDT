@@ -52,7 +52,7 @@ public class StepBusinessNetShoes {
 	}
 
 	public void selecionarTamanho(String tam) {
-		page.waitFor(3).seconds();
+		page.waitFor(5).seconds();
 		List<WebElement> elementos = page.getTamanhos();
 		for(WebElement ele: elementos) {
 			LOG.info(ele.getText());
@@ -93,6 +93,31 @@ public class StepBusinessNetShoes {
 
 	public void selecinarfaixaPreco() {
 		viewElement.click(page.getRadiBtnPreco());
+	}
+
+	public void calcularFrete(String cep) {
+		String[] c = cep.split("-");
+		//LOG.info(c[0].toString() +" "+ c[1].toString());
+		viewElement.sendText(page.getCampoCep1(), c[0].toString());
+		viewElement.sendText(page.getCampoCep2(), c[1].toString());
+		viewElement.click(page.getBtnCalculaCep());
+	}
+
+	public void verificarFreteCalculado() {
+		assertTrue(page.element(page.getCalculoDoFrete()).containsText("FRETE NETSHOES"));
+	}
+
+	public void clicarBtnLimparCarrinho() {
+		viewElement.clickAndWait(page.getBtnLimparCarrinho(), 10);
+	}
+
+	public void clicarBtnVoltarLoja() {
+		viewElement.clickAndWait(page.getBtnVoltarParaLoja(), 10);
+	}
+
+	public void verificarSeEstouPaginaInicial(String url) {
+		//LOG.info(viewElement.getDriver().getCurrentUrl());
+		assertTrue(viewElement.getDriver().getCurrentUrl().equals(url));
 	}
 
 

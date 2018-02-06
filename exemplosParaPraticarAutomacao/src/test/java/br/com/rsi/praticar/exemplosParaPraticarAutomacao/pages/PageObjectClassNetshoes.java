@@ -33,6 +33,26 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(xpath="/html/body/div[3]/div[4]/aside/div/div[9]/div/ul/li[2]/a/input")
 	private WebElement radiBtnPreco;
 	
+	@FindBy(xpath="/html/body/div[3]/div[2]/table/tbody")
+	private WebElement freteCarrinho;
+	
+	@FindBy(name="cep-first-input")
+	private WebElement campoCep1;
+	
+	@FindBy(name="cep-second-input")
+	private WebElement campoCep2;
+	
+	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[1]/div/form/div/div/div[4]/button")
+	private WebElement btnCalculaCep;
+	
+	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[2]")
+	private WebElement calculoDoFrete;
+	
+	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[5]/td[1]/form/button")
+	private WebElement btnLimparCarrinho;
+	
+	@FindBy(xpath="/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
+	private WebElement btnVoltarParaLoja;
 	
 	
 	public WebElement getGetCalcadoscategorias() {
@@ -65,6 +85,34 @@ public class PageObjectClassNetshoes extends PageObject{
 
 	public WebElement getRadiBtnPreco() {
 		return radiBtnPreco;
+	}
+
+	public WebElement getFreteCarrinho() {
+		return freteCarrinho;
+	}
+
+	public WebElement getCampoCep1() {
+		return campoCep1;
+	}
+
+	public WebElement getCampoCep2() {
+		return campoCep2;
+	}
+
+	public WebElement getBtnCalculaCep() {
+		return btnCalculaCep;
+	}
+
+	public WebElement getCalculoDoFrete() {
+		return calculoDoFrete;
+	}
+
+	public WebElement getBtnLimparCarrinho() {
+		return btnLimparCarrinho;
+	}
+
+	public WebElement getBtnVoltarParaLoja() {
+		return btnVoltarParaLoja;
 	}
 
 

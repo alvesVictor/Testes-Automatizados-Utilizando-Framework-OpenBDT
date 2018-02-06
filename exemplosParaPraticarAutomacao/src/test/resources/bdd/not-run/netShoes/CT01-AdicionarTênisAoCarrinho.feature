@@ -14,4 +14,4 @@ Scenario Outline: Adicionar tênis ao carrinho
 
 Examples:
 	|url						|opcao		|tipo	|tenis										|tam	|
-	|http://www.netshoes.com.br/|CALÇADOS	|Tênis	|Tênis Diadora Mission Masculino			|41		|
+	|http://www.netshoes.com.br/|CALÇADOS	|Tênis	|Tênis Couro Nike Shox Avenue LTR Masculino	|41		|

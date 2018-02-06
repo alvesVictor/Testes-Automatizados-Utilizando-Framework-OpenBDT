@@ -65,6 +65,32 @@ public class StepDefinitionNetShoes {
 	public void seleciono_faixa_de_preco() throws Throwable {
 		stepB.selecinarfaixaPreco();
 	}
+	
+	@When("^calculo o frete \"([^\"]*)\"$")
+	public void calculo_o_frete(String cep) throws Throwable {
+		stepB.calcularFrete(cep);
+	}
+	
+	@When("^clico no botao 'Limpar_Carrinho'$")
+	public void clico_no_botao_Limpar_Carrinho() throws Throwable {
+		stepB.clicarBtnLimparCarrinho();
+	}
+
+	@When("^clico no botao 'VOLTAR_PARA_A_LOJA'$")
+	public void clico_no_botao_VOLTAR_PARA_A_LOJA() throws Throwable {
+		stepB.clicarBtnVoltarLoja();
+	}
+
+	@Then("^verifico se estou na pagina inicial \"([^\"]*)\"$")
+	public void verifico_se_estou_na_pagina_inicial(String url) throws Throwable {
+		stepB.verificarSeEstouPaginaInicial(url);
+	}
+	
+	@Then("^verifico se o frete foi calculado$")
+	public void verifico_se_o_frete_foi_calculado() throws Throwable {
+		stepB.verificarFreteCalculado();
+	}
+	
 	@Then("^verifico se o item foi adicionado ao carrinho netShoes \"([^\"]*)\"$")
 	public void verifico_se_o_item_foi_adicionado_ao_carrinho_netShoes(String item) throws Throwable {
 		stepB.verificarItemNoCarrinho(item);
