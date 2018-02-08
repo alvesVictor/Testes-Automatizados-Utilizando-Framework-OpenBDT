@@ -101,6 +101,16 @@ public class StepDefinitionHotelUrbano {
 		stepB.inserirTelefoneSacador(tel);
 	}
 	
+	@When("^seleciono opcao no menu superior \"([^\"]*)\"$")
+	public void seleciono_opcao_no_menu_superior(String menu) throws Throwable {
+		stepB.selecionarOpcaoMenu(menu);
+	}
+	
+	@Then("^verifico se possui alguma promocao \"([^\"]*)\"$")
+	public void verifico_se_possui_alguma_promocao(String promo) throws Throwable {
+		stepB.verificarPromocao(promo);
+	}
+	
 	@Then("^verifico se o hotel escolhido foi carregado \"([^\"]*)\"$")
 	public void verifico_se_o_hotel_escolhido_foi_carregado(String hotel) throws Throwable {
 		stepB.verificarSeCarregouHotelEscolhido(hotel);

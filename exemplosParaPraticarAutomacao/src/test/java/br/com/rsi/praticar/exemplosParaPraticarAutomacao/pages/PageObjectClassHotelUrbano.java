@@ -62,8 +62,14 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(name="billHolderTel")
 	private WebElement campoTelSacador;
 	
+	@FindBy(xpath="//*[@id='reactRoot']/div/div[1]/div/div[1]/div[1]/header/div/div[2]/nav/a")
+	private List<WebElement> menuOpcoes;
+	
 	@FindBy(xpath="//*[@id='paymentMethods']/ul/li")
 	private List<WebElement> formasPagamento;
+	
+	@FindBy(xpath="//*[@id=\"reactRoot\"]/div/div[3]/div[2]/div/div[4]/div/div[2]/div/a/div[2]/div[1]/strong")
+	private List<WebElement> destinoViagem;
 	
 
 	public WebElement getCampoBusca() {
@@ -136,6 +142,14 @@ public class PageObjectClassHotelUrbano extends PageObject{
 
 	public List<WebElement> getFormasPagamento() {
 		return formasPagamento;
+	}
+
+	public List<WebElement> getMenuOpcoes() {
+		return menuOpcoes;
+	}
+
+	public List<WebElement> getDestinoViagem() {
+		return destinoViagem;
 	}
 	
 }

@@ -136,6 +136,32 @@ public class StepBusinessHotelUrbano {
 	public void inserirTelefoneSacador(String tel) {
 		viewElement.sendText(page.getCampoTelSacador(), tel);
 	}
+
+	public void selecionarOpcaoMenu(String menu) {
+		List<WebElement> elementos = page.getMenuOpcoes();
+		for(WebElement ele : elementos) {
+			LOG.info(ele.getText());
+			if(ele.getText().contains(menu)) {
+				ele.click();
+				break;
+			}
+		}
+	}
+
+	public void verificarPromocao(String promo) {
+		page.waitFor(3).seconds();
+		List<WebElement> elementos = page.getDestinoViagem();
+		boolean achou = false;
+		for(WebElement ele : elementos) {
+			LOG.info(ele.getText());
+			if(ele.getText().contains(promo)) {
+				achou = true;
+				break;
+			}
+		}
+		
+		assertTrue(achou);
+	}
 	
 
 }
