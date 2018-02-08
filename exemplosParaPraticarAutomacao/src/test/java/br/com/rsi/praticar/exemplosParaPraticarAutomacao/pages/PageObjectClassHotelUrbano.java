@@ -44,6 +44,27 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath="//*[@id=\"main-container\"]/div/div/div[3]/div/div[2]/section[2]/div[3]/div/div[2]")
 	private WebElement resultadosVoo;
 	
+	@FindBy(xpath="//*[@id='hu-hotels-autocomplete-field']/div/ul/li[4]/strong")
+	private WebElement buscaThermas;
+	
+	@FindBy(xpath="//*[@id='offer-options']/div[1]/div/div/select")
+	private WebElement selectQtdPessoas;
+	
+	@FindBy(xpath="//*[@id='offer-options']/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[4]/a")
+	private WebElement btnComprarIngressoThermas;
+	
+	@FindBy(name="guestEmail")
+	private WebElement campoEmailVisitante;
+	
+	@FindBy(name="billHolder")
+	private WebElement campoNomeSacador;
+	
+	@FindBy(name="billHolderTel")
+	private WebElement campoTelSacador;
+	
+	@FindBy(xpath="//*[@id='paymentMethods']/ul/li")
+	private List<WebElement> formasPagamento;
+	
 
 	public WebElement getCampoBusca() {
 		return campoBusca;
@@ -87,6 +108,34 @@ public class PageObjectClassHotelUrbano extends PageObject{
 
 	public WebElement getResultadosVoo() {
 		return resultadosVoo;
+	}
+
+	public WebElement getBuscaThermas() {
+		return buscaThermas;
+	}
+
+	public WebElement getSelectQtdPessoas() {
+		return selectQtdPessoas;
+	}
+
+	public WebElement getBtnComprarIngressoThermas() {
+		return btnComprarIngressoThermas;
+	}
+
+	public WebElement getCampoEmailVisitante() {
+		return campoEmailVisitante;
+	}
+
+	public WebElement getCampoNomeSacador() {
+		return campoNomeSacador;
+	}
+
+	public WebElement getCampoTelSacador() {
+		return campoTelSacador;
+	}
+
+	public List<WebElement> getFormasPagamento() {
+		return formasPagamento;
 	}
 	
 }

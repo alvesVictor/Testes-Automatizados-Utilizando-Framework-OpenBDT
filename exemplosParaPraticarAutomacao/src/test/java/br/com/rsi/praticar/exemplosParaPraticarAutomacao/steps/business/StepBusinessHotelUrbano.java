@@ -100,6 +100,42 @@ public class StepBusinessHotelUrbano {
 		viewElement.waitForElementIsPresent(40, page.getResultadosVoo());
 		assertTrue(page.waitFor(page.getResultadosVoo()).isVisible());
 	}
+
+	public void selecionarOpcaoThermasLaranjais() {
+		page.waitFor(page.getBuscaThermas()).isVisible();
+		viewElement.click(page.getBuscaThermas());
+	}
+
+	public void inserirQtdPessoas(String qtd) {
+		viewElement.selectByVisibleText(page.getSelectQtdPessoas(), qtd);
+	}
+
+	public void clicarBtnComprar() {
+		viewElement.click(page.getBtnComprarIngressoThermas());
+	}
+
+	public void inserirEmailVisitante(String email) {
+		page.waitFor(5).seconds();
+		viewElement.sendText(page.getCampoEmailVisitante(), email);
+	}
+
+	public void selecionarFormaPagamento(String pagamento) {
+		List<WebElement> elementos = page.getFormasPagamento();
+		for(WebElement ele : elementos) {
+			if(ele.getText().contains(pagamento)){
+				ele.click();
+				break;
+			}
+		}
+	}
+
+	public void inserirNomeSacador(String nome) {
+		viewElement.sendText(page.getCampoNomeSacador(), nome);
+	}
+
+	public void inserirTelefoneSacador(String tel) {
+		viewElement.sendText(page.getCampoTelSacador(), tel);
+	}
 	
 
 }

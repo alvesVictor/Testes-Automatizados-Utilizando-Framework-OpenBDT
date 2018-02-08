@@ -66,6 +66,40 @@ public class StepDefinitionHotelUrbano {
 		stepB.clicarBtnBuscarPassagens();
 	}
 
+	@When("^seleciono a opcao 'Ingresso_Thermas_dos_Laranjais'$")
+	public void seleciono_a_opcao_Ingresso_Thermas_dos_Laranjais() throws Throwable {
+		stepB.selecionarOpcaoThermasLaranjais();
+	}
+	
+	@When("^insiro quantidade de pessoas \"([^\"]*)\"$")
+	public void insiro_quantidade_de_pessoas(String qtd) throws Throwable {
+		stepB.inserirQtdPessoas(qtd);
+	}
+
+	@When("^clico no botao 'COMPRAR' hotelBarato$")
+	public void clico_no_botao_COMPRAR_hotelBarato() throws Throwable {
+		stepB.clicarBtnComprar();
+	}
+
+	@When("^insiro email do visitante \"([^\"]*)\"$")
+	public void insiro_email_do_visitante(String email) throws Throwable {
+		stepB.inserirEmailVisitante(email);		
+	}
+	
+	@When("^seleciono forma de pagamento \"([^\"]*)\"$")
+	public void seleciono_forma_de_pagamento(String pagamento) throws Throwable {
+		stepB.selecionarFormaPagamento(pagamento);
+	}
+
+	@When("^insiro no campo 'Nome_do_sacador' \"([^\"]*)\"$")
+	public void insiro_no_campo_Nome_do_sacador(String nome) throws Throwable {
+		stepB.inserirNomeSacador(nome);
+	}
+
+	@When("^insiro no campo 'Telefone_do_sacador' \"([^\"]*)\"$")
+	public void insiro_no_campo_Telefone_do_sacador(String tel) throws Throwable {
+		stepB.inserirTelefoneSacador(tel);
+	}
 	
 	@Then("^verifico se o hotel escolhido foi carregado \"([^\"]*)\"$")
 	public void verifico_se_o_hotel_escolhido_foi_carregado(String hotel) throws Throwable {
