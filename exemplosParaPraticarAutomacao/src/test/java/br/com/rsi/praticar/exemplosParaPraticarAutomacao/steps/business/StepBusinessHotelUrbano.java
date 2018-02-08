@@ -115,7 +115,7 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void inserirEmailVisitante(String email) {
-		page.waitFor(5).seconds();
+		page.waitFor(4).seconds();
 		viewElement.sendText(page.getCampoEmailVisitante(), email);
 	}
 
