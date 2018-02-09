@@ -164,8 +164,16 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionarDataEntrada(String dia, String mes, String ano) {
-		page.waitFor(5).seconds();
-		viewElement.click(page.getDataChekin());
+		viewElement.click(page.getDataCheckin());
+		selecionaDiaMesAno(dia, mes, ano);
+	}
+
+	public void selecionarDataSaida(String dia, String mes, String ano) {
+		viewElement.click(page.getDataCheckout());
+		selecionaDiaMesAno(dia, mes, ano);
+	}
+	
+	private void selecionaDiaMesAno(String dia, String mes, String ano) {
 		//seleciona mes e ano
 		while(!page.element(page.getDataMes()).containsText(mes) || !page.element(page.getDataAno()).containsText(ano)) {
 			viewElement.click(page.getDataProx());
@@ -174,14 +182,28 @@ public class StepBusinessHotelUrbano {
 		List<WebElement> dias = page.getDataDias();
 		boolean mesCorrente = false;
 		for(WebElement d: dias) {
-			viewElement.mouseOver(d);
+			//viewElement.mouseOver(d);
 			if(d.getText().equals("1")) {
 				mesCorrente = true;
 			}
 			if(d.getText().equals(dia) && mesCorrente){
+				page.waitFor(3).seconds();
 				d.click();
+				break;
 			}
 		}
+	}
+
+	public void selecionarQtdQuartos(String qtdQuartos) {
+		viewElement.selectByVisibleText(page.getNumQuartos(), qtdQuartos);
+	}
+
+	public void selecionarNumeroAdultos(String qtdAdultos) {
+		viewElement.selectByVisibleText(page.getNumAdulto(), qtdAdultos);
+	}
+
+	public void selecionarNumeroCriancas(String qtdCriancas) {
+		viewElement.selectByVisibleText(page.getNumCrianca(), qtdCriancas);
 	}
 	
 

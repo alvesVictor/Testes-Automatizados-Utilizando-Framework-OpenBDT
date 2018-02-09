@@ -111,6 +111,31 @@ public class StepDefinitionHotelUrbano {
 		stepB.selecionarDataEntrada(dia, mes, ano);
 	}
 	
+	@When("^seleciono data de saida \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void seleciono_data_de_saida(String dia,String mes, String ano) throws Throwable {
+		stepB.selecionarDataSaida(dia, mes, ano);
+	}
+	
+	@When("^seleciono quantidade de quartos \"([^\"]*)\"$")
+	public void seleciono_quantidade_de_quartos(String qtdQuartos) throws Throwable {
+		stepB.selecionarQtdQuartos(qtdQuartos);
+	}
+
+	@When("^seleciono numero de adultos \"([^\"]*)\"$")
+	public void seleciono_numero_de_adultos(String qtdAdultos) throws Throwable {
+		stepB.selecionarNumeroAdultos(qtdAdultos);
+	}
+
+	@When("^seleciono numero de criancas \"([^\"]*)\"$")
+	public void seleciono_numero_de_criancas(String qtdCriancas) throws Throwable {
+		stepB.selecionarNumeroCriancas(qtdCriancas);
+	}
+	
+	@When("^clico no botao 'Verificar_Disponibilidade'$")
+	public void clico_no_botao_Verificar_Disponibilidade() throws Throwable {
+			//Continuar Daqui
+	}
+	
 	@Then("^verifico se possui alguma promocao \"([^\"]*)\"$")
 	public void verifico_se_possui_alguma_promocao(String promo) throws Throwable {
 		stepB.verificarPromocao(promo);

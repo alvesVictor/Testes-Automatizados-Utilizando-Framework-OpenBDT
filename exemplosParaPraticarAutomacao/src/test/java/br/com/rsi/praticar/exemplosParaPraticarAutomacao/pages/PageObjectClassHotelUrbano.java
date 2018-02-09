@@ -72,8 +72,11 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	private List<WebElement> destinoViagem;
 	
 	@FindBy(xpath="//*[@id='formCalendarTop']/div[1]/div[1]/div/input")
-	private WebElement dataChekin;
+	private WebElement dataCheckin;
 					
+	@FindBy(xpath="//*[@id='formCalendarTop']/div[1]/div[2]/div/input")
+	private WebElement dataCheckout;
+	
 	@FindBy(xpath="//*[@id='ui-datepicker-div']/div/a[2]/span")
 	private WebElement dataProx;
 	
@@ -85,6 +88,18 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	
 	@FindBy(xpath="//*[@id='ui-datepicker-div']/div/div/span[2]")
 	private WebElement dataAno;
+	
+	@FindBy(name="rooms")
+	private WebElement numQuartos;
+	
+	@FindBy(name="adults")
+	private WebElement numAdulto;
+	
+	@FindBy(name="children")
+	private WebElement numCrianca;
+	
+	@FindBy(xpath="//*[@id='formCalendarTop']/div[3]/div/input")
+	private WebElement btnVerificarDisponibilidade;
 	
 	public WebElement getCampoBusca() {
 		return campoBusca;
@@ -166,8 +181,8 @@ public class PageObjectClassHotelUrbano extends PageObject{
 		return destinoViagem;
 	}
 
-	public WebElement getDataChekin() {
-		return dataChekin;
+	public WebElement getDataCheckin() {
+		return dataCheckin;
 	}
 
 	public WebElement getDataProx() {
@@ -184,6 +199,26 @@ public class PageObjectClassHotelUrbano extends PageObject{
 
 	public WebElement getDataAno() {
 		return dataAno;
+	}
+
+	public WebElement getDataCheckout() {
+		return dataCheckout;
+	}
+
+	public WebElement getNumQuartos() {
+		return numQuartos;
+	}
+
+	public WebElement getNumAdulto() {
+		return numAdulto;
+	}
+
+	public WebElement getNumCrianca() {
+		return numCrianca;
+	}
+
+	public WebElement getBtnVerificarDisponibilidade() {
+		return btnVerificarDisponibilidade;
 	}
 	
 }

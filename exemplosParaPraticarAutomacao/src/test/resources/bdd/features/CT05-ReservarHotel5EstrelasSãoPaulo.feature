@@ -9,8 +9,15 @@ Scenario Outline: Reservar diária hotel 5 estrelas São Paulo
 	And seleciono o hotel "<hotel>"
 	And verifico se abriu nova aba hotelUrbano
 	And verifico se o hotel escolhido foi carregado "<hotel>"
-	And seleciono data de entrada "<dia>" "<mes>" "<ano>"
+	And seleciono data de entrada "<diaIda>" "<mesIda>" "<anoIda>"
+	And seleciono data de saida "<diaVolta>" "<mesVolta>" "<anoVolta>"
+	And seleciono quantidade de quartos "<qtdQuarto>"
+	And seleciono numero de adultos "<numAdulto>"
+	And seleciono numero de criancas "<numCrianca>"
+	And clico no botao 'Verificar_Disponibilidade'
+	
+	
 
 Examples:
-	|url							|busca			|numEstrelas|hotel				|dia|mes	|ano	|
-	|https://www.hotelurbano.com/	|São Paulo		|5			|Meliá Ibirapuera	|31 |Agosto	|2018	|
+	|url							|busca			|numEstrelas|hotel					|diaIda	|mesIda	|anoIda	|diaVolta	|mesVolta|anoVolta	|qtdQuarto	|numAdulto	|numCrianca	|
+	|https://www.hotelurbano.com/	|São Paulo		|5			|Radisson Blu São Paulo	|20 	|Agosto	|2018	|22			|Setembro|2020		|1			|2			|0			|	
