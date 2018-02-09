@@ -71,7 +71,21 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath="//*[@id=\"reactRoot\"]/div/div[3]/div[2]/div/div[4]/div/div[2]/div/a/div[2]/div[1]/strong")
 	private List<WebElement> destinoViagem;
 	
-
+	@FindBy(xpath="//*[@id='formCalendarTop']/div[1]/div[1]/div/input")
+	private WebElement dataChekin;
+					
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/div/a[2]/span")
+	private WebElement dataProx;
+	
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/table/tbody/tr/td/a")
+	private List<WebElement> dataDias;
+	
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/div/div/span[1]")
+	private WebElement dataMes;
+	
+	@FindBy(xpath="//*[@id='ui-datepicker-div']/div/div/span[2]")
+	private WebElement dataAno;
+	
 	public WebElement getCampoBusca() {
 		return campoBusca;
 	}
@@ -150,6 +164,26 @@ public class PageObjectClassHotelUrbano extends PageObject{
 
 	public List<WebElement> getDestinoViagem() {
 		return destinoViagem;
+	}
+
+	public WebElement getDataChekin() {
+		return dataChekin;
+	}
+
+	public WebElement getDataProx() {
+		return dataProx;
+	}
+
+	public List<WebElement> getDataDias() {
+		return dataDias;
+	}
+
+	public WebElement getDataMes() {
+		return dataMes;
+	}
+
+	public WebElement getDataAno() {
+		return dataAno;
 	}
 	
 }

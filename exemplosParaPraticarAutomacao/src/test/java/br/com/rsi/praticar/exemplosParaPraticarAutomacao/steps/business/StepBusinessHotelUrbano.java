@@ -162,6 +162,27 @@ public class StepBusinessHotelUrbano {
 		
 		assertTrue(achou);
 	}
+
+	public void selecionarDataEntrada(String dia, String mes, String ano) {
+		page.waitFor(5).seconds();
+		viewElement.click(page.getDataChekin());
+		//seleciona mes e ano
+		while(!page.element(page.getDataMes()).containsText(mes) || !page.element(page.getDataAno()).containsText(ano)) {
+			viewElement.click(page.getDataProx());
+		}
+		//seleciona o dia
+		List<WebElement> dias = page.getDataDias();
+		boolean mesCorrente = false;
+		for(WebElement d: dias) {
+			viewElement.mouseOver(d);
+			if(d.getText().equals("1")) {
+				mesCorrente = true;
+			}
+			if(d.getText().equals(dia) && mesCorrente){
+				d.click();
+			}
+		}
+	}
 	
 
 }

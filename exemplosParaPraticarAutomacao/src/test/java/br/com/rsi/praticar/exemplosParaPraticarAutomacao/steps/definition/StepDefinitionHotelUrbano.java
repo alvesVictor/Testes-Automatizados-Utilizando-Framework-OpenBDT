@@ -106,6 +106,11 @@ public class StepDefinitionHotelUrbano {
 		stepB.selecionarOpcaoMenu(menu);
 	}
 	
+	@When("^seleciono data de entrada \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void seleciono_data_de_entrada(String dia,String mes, String ano) throws Throwable {
+		stepB.selecionarDataEntrada(dia, mes, ano);
+	}
+	
 	@Then("^verifico se possui alguma promocao \"([^\"]*)\"$")
 	public void verifico_se_possui_alguma_promocao(String promo) throws Throwable {
 		stepB.verificarPromocao(promo);
