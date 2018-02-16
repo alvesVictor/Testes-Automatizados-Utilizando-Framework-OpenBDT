@@ -101,6 +101,54 @@ public class PageObjectClassHotelUrbano extends PageObject{
 	@FindBy(xpath="//*[@id='formCalendarTop']/div[3]/div/input")
 	private WebElement btnVerificarDisponibilidade;
 	
+	@FindBy(id="wrap-availability")
+	private WebElement quartos;
+	
+	@FindBy(xpath="//*[@id='wrap-rooms']/div[1]/div[2]/div[2]/select")
+	private WebElement qtdQuartosReservados;
+	
+	@FindBy(xpath="//*[@id='wrap-booking-info']/div/div[2]/div/input")
+	private WebElement btnReservar;
+	
+	@FindBy(xpath="//*[@id='paymentForm']/div[2]/div/section/div/div/input")
+	private WebElement campoResponsavelQuarto;
+	
+	
+	@FindBy(name="cpf[]")
+	private WebElement cpfTitular;
+	
+	@FindBy(name="date-of-birthday[]")
+	private WebElement dataNascimento;
+	
+	@FindBy(name="phoneNumber[]")
+	private WebElement telefone;
+	
+	@FindBy(name="cardNumber[]")
+	private WebElement numeroCartao;
+	
+	@FindBy(name="cardHolder[]")
+	private WebElement titularCartao;
+	
+	@FindBy(name="expiration[]")
+	private WebElement validade;
+	
+	@FindBy(name="cvv[]")
+	private WebElement codSeguranca;
+	
+	@FindBy(name="installments[]")
+	private WebElement numeroParcelas;
+	
+	////*[@id="paymentMethods__cc"]/div[1]/div[3]/div/label/span/span
+	////*[@id="paymentMethods__cc"]/div[1]/div[4]/div/label/span/span
+	@FindBy(xpath="//*[@id='paymentMethods__cc']/div[1]/div/div/label/span/span")
+	private List<WebElement> numerosCartoes;
+	
+	
+	
+	
+	
+	
+	
 	public WebElement getCampoBusca() {
 		return campoBusca;
 	}
@@ -219,6 +267,58 @@ public class PageObjectClassHotelUrbano extends PageObject{
 
 	public WebElement getBtnVerificarDisponibilidade() {
 		return btnVerificarDisponibilidade;
+	}
+
+	public WebElement getQuartos() {
+		return quartos;
+	}
+
+	public WebElement getQtdQuartosReservados() {
+		return qtdQuartosReservados;
+	}
+
+	public WebElement getBtnReservar() {
+		return btnReservar;
+	}
+
+	public WebElement getCampoResponsavelQuarto() {
+		return campoResponsavelQuarto;
+	}
+
+	public WebElement getCpfTitular() {
+		return cpfTitular;
+	}
+
+	public WebElement getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public WebElement getTelefone() {
+		return telefone;
+	}
+
+	public WebElement getNumeroCartao() {
+		return numeroCartao;
+	}
+
+	public WebElement getTitularCartao() {
+		return titularCartao;
+	}
+
+	public WebElement getValidade() {
+		return validade;
+	}
+
+	public WebElement getCodSeguranca() {
+		return codSeguranca;
+	}
+
+	public WebElement getNumeroParcelas() {
+		return numeroParcelas;
+	}
+
+	public List<WebElement> getNumerosCartoes() {
+		return numerosCartoes;
 	}
 	
 }

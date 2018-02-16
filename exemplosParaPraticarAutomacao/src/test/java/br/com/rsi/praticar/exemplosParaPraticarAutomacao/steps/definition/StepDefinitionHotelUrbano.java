@@ -133,7 +133,67 @@ public class StepDefinitionHotelUrbano {
 	
 	@When("^clico no botao 'Verificar_Disponibilidade'$")
 	public void clico_no_botao_Verificar_Disponibilidade() throws Throwable {
-			//Continuar Daqui
+		stepB.clicarBtnVerificarDisponibilidade();
+	}
+	
+	@When("^clico no numero de quartos \"([^\"]*)\"$")
+	public void clico_no_numero_de_quartos(String numQuartos) throws Throwable {
+		stepB.clicarNumeroQuartos(numQuartos);
+	}
+
+	@When("^clico em 'Reservar'$")
+	public void clico_em_Reservar() throws Throwable {
+	   stepB.clicarBtnReservar();
+	}
+	
+	@When("^insiro nome do responsavel do quarto \"([^\"]*)\"$")
+	public void insiro_nome_do_responsavel_do_quarto(String nome) throws Throwable {
+		stepB.inserirNomeResponsavel(nome);
+	}
+
+	@When("^seleciono numero de cartoes de credito \"([^\"]*)\"$")
+	public void seleciono_numero_de_cartoes_de_credito(String numero) throws Throwable {
+		stepB.selecionarNumeroDeCartoes(numero);
+	}
+
+	@When("^insiro cpf \"([^\"]*)\"$")
+	public void insiro_cpf(String cpf) throws Throwable {
+		stepB.inserirCpf(cpf);
+	}
+
+	@When("^insiro data nascimento \"([^\"]*)\"$")
+	public void insiro_data_nascimento(String data) throws Throwable {
+		stepB.inserirDataNascimento(data);
+	}
+
+	@When("^insiro telefone \"([^\"]*)\"$")
+	public void insiro_telefone(String tel) throws Throwable {
+		stepB.inserirTelefone(tel);
+	}
+
+	@When("^insiro numero do cartao de credito \"([^\"]*)\"$")
+	public void insiro_numero_do_cartao_de_credito(String numeroCartao) throws Throwable {
+		stepB.inserirNumeroCartao(numeroCartao);
+	}
+
+	@When("^insiro titular do cartao \"([^\"]*)\"$")
+	public void insiro_titular_do_cartao(String titular) throws Throwable {
+		stepB.inserirTitularCartao(titular);
+	}
+
+	@When("^insiro validade do cartao \"([^\"]*)\"$")
+	public void insiro_validade_do_cartao(String validade) throws Throwable {
+		stepB.inserirValidadeCartao(validade);
+	}
+
+	@When("^insiro codigo de seguranca do cartao \"([^\"]*)\"$")
+	public void insiro_codigo_de_seguranca_do_cartao(String codSeguranca) throws Throwable {
+		stepB.inserirCodigoSeguranca(codSeguranca);
+	}
+
+	@When("^seleciono o numero de parcelas \"([^\"]*)\"$")
+	public void seleciono_o_numero_de_parcelas(String numParcelas) throws Throwable {
+		stepB.selecionarNumeroParcelas(numParcelas);
 	}
 	
 	@Then("^verifico se possui alguma promocao \"([^\"]*)\"$")

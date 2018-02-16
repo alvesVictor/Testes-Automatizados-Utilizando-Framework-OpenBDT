@@ -205,6 +205,68 @@ public class StepBusinessHotelUrbano {
 	public void selecionarNumeroCriancas(String qtdCriancas) {
 		viewElement.selectByVisibleText(page.getNumCrianca(), qtdCriancas);
 	}
-	
+
+	public void clicarBtnVerificarDisponibilidade() {
+		viewElement.click(page.getBtnVerificarDisponibilidade());
+		page.waitFor(10).seconds();
+	}
+
+	public void clicarNumeroQuartos(String numQuartos) {
+		viewElement.waitForElementIsPresent(10, page.getQuartos());
+		viewElement.selectByValue(page.getQtdQuartosReservados(), numQuartos);
+	}
+
+	public void clicarBtnReservar() {
+		viewElement.click(page.getBtnReservar());
+	}
+
+	public void inserirNomeResponsavel(String nome) {
+		viewElement.sendText(page.getCampoResponsavelQuarto(), nome);
+	}
+
+	public void selecionarNumeroDeCartoes(String numero) {
+		List<WebElement> elementos = page.getNumerosCartoes();
+		for(WebElement ele: elementos) {
+			LOG.info(ele.getText());
+			if(ele.getText().contains(numero)) {
+				ele.click();
+				break;
+			}
+		}
+	}
+
+	public void inserirCpf(String cpf) {
+		viewElement.sendText(page.getCpfTitular(), cpf);
+	}
+
+	public void inserirDataNascimento(String data) {
+		viewElement.sendText(page.getDataNascimento(), data);
+	}
+
+	public void inserirTelefone(String tel) {
+		viewElement.sendText(page.getTelefone(), tel);
+	}
+
+	public void inserirNumeroCartao(String numeroCartao) {
+		viewElement.sendText(page.getNumeroCartao(), numeroCartao);
+	}
+
+	public void inserirTitularCartao(String titular) {
+		viewElement.click(page.getTitularCartao());
+		page.waitFor(3).seconds();
+		viewElement.sendText(page.getTitularCartao(), titular);
+	}
+
+	public void inserirValidadeCartao(String validade) {
+		viewElement.sendText(page.getValidade(), validade);
+	}
+
+	public void inserirCodigoSeguranca(String codSeguranca) {
+		viewElement.sendText(page.getCodSeguranca(), codSeguranca);
+	}
+
+	public void selecionarNumeroParcelas(String numParcelas) {
+		viewElement.selectByValue(page.getNumeroParcelas(), numParcelas);
+	}	
 
 }
