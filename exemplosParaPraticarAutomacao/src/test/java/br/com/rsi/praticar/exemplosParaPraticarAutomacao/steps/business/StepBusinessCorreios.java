@@ -126,9 +126,11 @@ public class StepBusinessCorreios {
 		//LOG.info(page.getDivTipoEmbalagem());
 		while(!page.element(page.getDivTipoEmbalagem()).containsText(tipoEmbalagem)){
 			viewElement.click(page.getBtnNextTipo());
-			page.waitFor(3).seconds();
+			page.waitFor(1).seconds();
 		}
+		page.waitFor(3).seconds();
 		viewElement.click(page.getBtnSelecionarEmbalagem());
+		//viewElement.findElement(page.getDivTipoEmbalagem()).findElement(page.getBtnSelecionarEmbalagem()).click();
 	}
 
 	public void clicarBtnEnviar() {

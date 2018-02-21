@@ -17,4 +17,4 @@ Scenario Outline: Adicionar qualquer item no carrinho, Limpar Carrinho e voltar 
 
 Examples:
 	|url							|opcao		|tipo	|tenis												|tam	|cep		|
-	|http://www.netshoes.com.br/	|CALÇADOS	|Tênis	|Tênis Couro Nike Shox Avenue LTR Masculino			|41		|06020-000	|
+	|https://www.netshoes.com.br/	|CALÇADOS	|Tênis	|Tênis Couro Nike Shox Avenue LTR Masculino			|41		|06020-000	|

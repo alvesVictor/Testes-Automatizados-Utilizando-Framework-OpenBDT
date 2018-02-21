@@ -7,7 +7,7 @@ Scenario Outline: Adicionar ao carrinho um item da seção Produtos Reembalados
 	When seleciono a opcao "<opcao>"
 	And seleciono iten "<item>"
 	And clico no botao 'COMPRAR'
-	And confirmo compra reembalado
+	And confirmo compra
 	And clico no botao 'CONTINUAR'
 	Then verifico se o produto foi adicionado no carrinho
 

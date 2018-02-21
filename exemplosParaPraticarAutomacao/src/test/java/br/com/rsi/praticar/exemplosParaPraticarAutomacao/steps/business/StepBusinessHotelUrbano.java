@@ -63,6 +63,7 @@ public class StepBusinessHotelUrbano {
 			//LOG.info(ho.getText());
 			if(ho.getText().contains(hotel)) {
 				ho.findElement(By.cssSelector("div")).findElement(By.cssSelector("a")).click();
+				//ho.findElement(By.xpath("//div/a")).click();
 				break;
 			}
 		}
@@ -73,14 +74,14 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void inserirLocalOrigem(String origem) {
-		viewElement.findElement(By.xpath("//*[@id='search']/div[1]/div[3]")).click();
+		viewElement.click(page.getDivCampoOrigemVoo());
 		viewElement.sendText(page.getCampoOrigemVoo(), origem);
 		page.waitFor(3).seconds();
 		viewElement.sendText(page.getCampoOrigemVoo(), ""+Keys.ENTER);
 	}
  
 	public void inserirLocalDestino(String destino) {
-		viewElement.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[4]")).click();
+		viewElement.click(page.getDivCampoDestinoVoo());
 		viewElement.sendText(page.getCampoDestinoVoo(), destino);
 		page.waitFor(3).seconds();
 		viewElement.sendText(page.getCampoDestinoVoo(), ""+Keys.ENTER);

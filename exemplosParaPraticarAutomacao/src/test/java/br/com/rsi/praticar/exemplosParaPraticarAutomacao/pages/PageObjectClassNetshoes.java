@@ -12,47 +12,44 @@ public class PageObjectClassNetshoes extends PageObject{
 	@FindBy(className="main-submenu with-banner calcados")
 	private WebElement getCalcadoscategorias;
 	
-	@FindBy(className="product-list-item")
+	@FindBy(xpath="//*[@id='item-list']/div[1]/div")
 	private List<WebElement> listaProduto;
-
-	@FindBy(id="buy-now-button")
+			
+	@FindBy(id="buy-button-now")
 	private WebElement btnComprar;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div[1]/div[3]/div/form/div[4]/ul/li")
+	@FindBy(xpath="//div[@class='sku-select label']/ul/li")
 	private List<WebElement> tamanhos;
 	
 	@FindBy(className="product-line")
 	private WebElement carrinho;
 	
-	@FindBy(id="search")
+	@FindBy(id="search-input")
 	private WebElement campoBusca;
 	
-	@FindBy(xpath="//*[@id='search-linx']/div[6]/div[2]/ul[2]/li")
+	@FindBy(xpath="//*[@id='item-list']/div/div ")
 	private List<WebElement> listaCamisaSelecao;
 	
-	@FindBy(xpath="/html/body/div[3]/div[4]/aside/div/div[9]/div/ul/li[2]/a/input")
+	@FindBy(xpath="//*[@id='aggregate-salePrice']/div/a[1]")
 	private WebElement radiBtnPreco;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/table/tbody")
-	private WebElement freteCarrinho;
+	@FindBy(name="shipping[zipCode]")
+	private WebElement campoCep;
 	
-	@FindBy(name="cep-first-input")
-	private WebElement campoCep1;
-	
-	@FindBy(name="cep-second-input")
-	private WebElement campoCep2;
-	
-	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[1]/div/form/div/div/div[4]/button")
+	@FindBy(xpath="//button[@class='calculate-shipping__button']")
 	private WebElement btnCalculaCep;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[2]")
+	@FindBy(xpath="//td[@class='column-shipping-label cart__table__column cart__table__column--align-right']")
 	private WebElement calculoDoFrete;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/table/tfoot/tr[5]/td[1]/form/button")
+	@FindBy(xpath="//td[@class='cart__table__column']/a")
 	private WebElement btnLimparCarrinho;
 	
-	@FindBy(xpath="/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
+	@FindBy(xpath="//div[@class='empty-content']/a")
 	private WebElement btnVoltarParaLoja;
+	
+	@FindBy(className="drezzup-categorias-li")
+	private List<WebElement> opcoesOutlet;
 	
 	
 	public WebElement getGetCalcadoscategorias() {
@@ -87,17 +84,10 @@ public class PageObjectClassNetshoes extends PageObject{
 		return radiBtnPreco;
 	}
 
-	public WebElement getFreteCarrinho() {
-		return freteCarrinho;
+	public WebElement getCampoCep() {
+		return campoCep;
 	}
 
-	public WebElement getCampoCep1() {
-		return campoCep1;
-	}
-
-	public WebElement getCampoCep2() {
-		return campoCep2;
-	}
 
 	public WebElement getBtnCalculaCep() {
 		return btnCalculaCep;
@@ -113,6 +103,10 @@ public class PageObjectClassNetshoes extends PageObject{
 
 	public WebElement getBtnVoltarParaLoja() {
 		return btnVoltarParaLoja;
+	}
+
+	public List<WebElement> getOpcoesOutlet() {
+		return opcoesOutlet;
 	}
 
 

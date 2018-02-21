@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Adicionar qualquer item ao carrinho e calcular frete até o CEP da RSI Matriz" skipped="0" tests="1" time="81.92" timestamp="2018-02-47 02:12:25"><testcase name="Adicionar qualquer item ao carrinho e calcular frete até o CEP da RSI Matriz"><failure type="java.lang.AssertionError"/><system-err>null&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.business.StepBusinessNetShoes.verificarFreteCalculado(StepBusinessNetShoes.java:111)&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.definition.StepDefinitionNetShoes.verifico_se_o_frete_foi_calculado(StepDefinitionNetShoes.java:91)&#13;
+io.openbdt.run.SuiteTestRunner.runWithJunit(SuiteTestRunner.java:21)&#13;
+br.com.rsi.praticar.exemplosParaPraticarAutomacao.runner.RunnerTest.test(RunnerTest.java:33)&#13;
+org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
+org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
+org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)&#13;
+org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
+</system-err></testcase></testsuite>

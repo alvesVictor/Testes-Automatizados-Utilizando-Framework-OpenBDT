@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="94b4a9ada4eb292d0cf16829d95bb1e8fa7222841ac4178bf641e11caf368adf.html">Buscar CEP (Por Endere&ccedil;o)</a>
+                > <a
+                    href="15aa0539fa6ecbe881edd4c1ce2ffa3255fd903cb93deaf5357d03d97e3f8b1c.html">Buscar usando Endere&ccedil;o </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-02-2018 13:04</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Buscar CEP (Por Endereço)</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="c1e6f6bdcbac7d373c524617e0c75834600ffadf63711b680980c8b4e084a4c9.html">Correios
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Buscar Usando Endere&ccedil;o
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario"></div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4fb5ea263173c000484fe34ffcacd518e0936b9be0d4fba09f0a3dea31c44107.png" title="Given estou na pagina inicial &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="6f6828b8616965885bdba21324829997fa0f812e1f98b3f95caaad5486a66b12.png" title="When preencho o campo 'Busca_CEP_ou_Endere&ccedil;o' &quot;&lt;endereco&gt;&quot;" width="960"/>
+                <img src="9e9a6b34934972086f5fca790e528bcf1d47fc7b46f3f154aebc16181d0a4c2a.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="ed80271ec096b36b7bd45b7e305f96470e184d21103c87fd2667cb4c8a146332.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="9c6b590842224561a0768e82a82890b15aaedffb1a40644fe0b56be2c0c4ce1c.png" title="Then verifico se foram encontrados os CEPs &quot;&lt;resul&gt;&quot;" width="960"/>
+                <img src="4fb5ea263173c000484fe34ffcacd518e0936b9be0d4fba09f0a3dea31c44107.png" title="Given estou na pagina inicial &quot;http://www.correios.com.br/para-voce&quot;" width="960"/>
+                <img src="08159656f8c846ea1cf6e783cb07faea2587400c1e1e7d1ede51ecf29806385b.png" title="When preencho o campo 'Busca_CEP_ou_Endere&ccedil;o' &quot;Avenida ze&quot;" width="960"/>
+                <img src="cebf210eb8191782f34a9b3c66ac982a204ae656c0aca7212a9931e611467934.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="5e0071f22a8bfb5226909b90cec6f72d0fff9e4ce752f660084de839e613eebf.png" title="And verifico se abriu nova aba" width="960"/>
+                <img src="2e3002970a4f5370d1a18a08afbd8cb220221975a2aa74967d95289c982d38ff.png" title="Then verifico se foram encontrados os CEPs &quot;DADOS ENCONTRADOS COM SUCESSO.&quot;" width="960"/>
+                <img src="bcc74c898e78a0e2be3619f2c039043ed0e2ac8f31cde7e4a67ca7b72c7ba909.png" title="Then verifico se foram encontrados os CEPs &quot;DADOS ENCONTRADOS COM SUCESSO.&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

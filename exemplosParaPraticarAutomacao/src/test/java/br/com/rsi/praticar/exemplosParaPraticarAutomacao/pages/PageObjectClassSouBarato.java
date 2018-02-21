@@ -13,25 +13,22 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath="//*[@id='lightpop']/div/div[2]/a")
 	private WebElement popUpInicial;
 
-	@FindBy(xpath="//*[@id='containerpage']/div/div/div/div/section/ul/li/section/div/a/img")
+	@FindBy(xpath=" //div[@class='p-image-placeholder']/a/img")
 	private List<WebElement> listaProdutosReembalados;
 	
 	@FindBy(id="product-buy-button")
 	private WebElement btnComprar;
 	
-	@FindBy(id="product-selected-buy-continue")
-	private WebElement btnConfirmarCompraReembalado;
-	
-	@FindBy(xpath="//*[@id='containerpage']/form/div[2]/div[2]/div/div[2]/button")
+	@FindBy(xpath="//button[@class='pure-button pure-button-buy button-large pure-button-wide']")
 	private WebElement btnContinuar;
 	
-	@FindBy(xpath="//*[@id='app']/section/article/div[2]/div[2]/div/div/table/tbody/tr[1]/td[1]")
+	@FindBy(xpath="//div[@class='table-summary table-summary-basket']//td[@class='text-capitalize col-xs-8' and contains(text(),'produto')]")
 	private WebElement campoQtdProduto;
 	
 	@FindBy(id="main-header-menu-toggle")
 	private WebElement btnMenu;
 	
-	@FindBy(xpath="//*[@id='containerpage']/div[5]/div/div/div[2]/section/ul/li/section")
+	@FindBy(xpath="//ul[@class='vitrine p-grid']/li/section")
 	private List<WebElement> listaGeladeiras;
 	
 	@FindBy(id="product-selected-buy-continue")
@@ -40,16 +37,16 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(id="header-search-input")
 	private WebElement campoBusca;
 	
-	@FindBy(xpath="//*[@id='containerpage']/div[1]/div/div[1]/h1")
+	@FindBy(xpath="//div[@class='panel-header']/h1")
 	private WebElement divResultadoBusca;
 	
-	@FindBy(xpath="//*[@id='containerpage']/div[1]/div/div[2]/section/ul/li/section")
+	@FindBy(xpath="//ul[@class='vitrine p-grid']/li")
 	private List<WebElement> listaIphone;
 	
-	@FindBy(xpath="//*[@id='containerpage']/div[3]/div/div/div[1]/ul/li[2]/a")
+	@FindBy(xpath="//a[contains(text(), 'VANTAGENS')]")
 	private WebElement linkVantagens;
 	
-	@FindBy(xpath="//*[@id=\"containerpage\"]/div[3]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+	@FindBy(xpath="//a[contains(text(), 'Conheça vantagens')]")
 	private WebElement linkConhecaVantagens;
 	
 	@FindBy(xpath="//*[@id='vantagens-cartoes']/h3")
@@ -90,9 +87,7 @@ public class PageObjectClassSouBarato extends PageObject{
 	public List<WebElement> getListaGeladeiras() {
 		return listaGeladeiras;
 	}
-	public WebElement getBtnConfirmarCompraReembalado() {
-		return btnConfirmarCompraReembalado;
-	}
+
 	public WebElement getCampoBusca() {
 		return campoBusca;
 	}

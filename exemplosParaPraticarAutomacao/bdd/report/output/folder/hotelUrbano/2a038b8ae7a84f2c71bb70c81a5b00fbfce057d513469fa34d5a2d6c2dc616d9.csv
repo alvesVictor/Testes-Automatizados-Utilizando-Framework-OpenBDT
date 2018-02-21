@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Adicionar ao carrinho camisa seleção brasileira","Adicionar ao carrinho camisa seleção brasileira","SUCCESS","2018-02-16T14:10:08.348-02:00","0.0","55.88"
+"Adicionar qualquer item ao carrinho e calcular frete até o CEP da RSI Matriz","Adicionar qualquer item ao carrinho e calcular frete até o CEP da RSI Matriz","FAILURE","2018-02-16T14:12:25.105-02:00","0.0","81.92"
+"Adicionar qualquer item no carrinho, Limpar Carrinho e voltar para loja","Adicionar qualquer item no carrinho, Limpar Carrinho e voltar para loja","SUCCESS","2018-02-16T14:07:03.605-02:00","0.0","65.65"
+"Adicionar tênis ao carrinho (qualquer um)","Adicionar tênis ao carrinho","SUCCESS","2018-02-16T14:08:58.866-02:00","0.0","66.56"
+"Escolher um calçado na seção outlet com valor abaixo de R$150,00","Escolher um calçado na seção outlet com valor abaixo de R$150,00","SUCCESS","2018-02-16T14:11:05.422-02:00","0.0","77.66"

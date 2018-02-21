@@ -8,4 +8,4 @@ Scenario Outline: Consultar se há promoção no trajeto Angra dos Reis-Rio de J
 
 Examples:
 	|url						|opcao			|	promo						|
-	|https://www.hotelurbano.com|PROMOÇÕES		|ANGRA DOS REIS/RIO DE JANEIRO	|
+	|https://www.hotelurbano.com|PROMOÇÕES		|MANGARATIBA/RIO DE JANEIRO		|

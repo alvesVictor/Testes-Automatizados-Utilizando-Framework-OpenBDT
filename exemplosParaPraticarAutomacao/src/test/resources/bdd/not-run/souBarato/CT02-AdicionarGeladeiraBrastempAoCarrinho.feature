@@ -9,9 +9,10 @@ Scenario Outline: Adicionar geladeira Brastemp ao carrinho
 	And seleciono o filtro de busca "<filtro>"
 	And clico em uma geladeira "<posicao>"
 	And clico no botao 'COMPRAR'
+	And confirmo compra
 	Then verifico se o produto foi adicionado no carrinho
 	
 	
 Examples:
 	|url							|categ				|subCateg				|filtro		|posicao|
-	|http://www.soubarato.com.br	|Eletrodomésticos	|Geladeiras e Freezeres	|Brastemp	|5		|
+	|http://www.soubarato.com.br	|Eletrodomésticos	|Geladeiras e Freezeres	|Brastemp	|6		|

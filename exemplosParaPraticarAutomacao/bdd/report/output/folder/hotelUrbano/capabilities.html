@@ -35,10 +35,10 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 5],
+                ['Passing', 11],
                 ['Pending', 0],
                 ['Ignored', 0],
-                ['Failing', 0],
+                ['Failing', 1],
                 ['Errors',  0],
                 ['Compromised',  0],
                 ['Untested',  0],
@@ -68,10 +68,10 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '5 requirements tested successfully'},
+                {label: '11 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
-                {label: '0} requirements with failures'},
+                {label: '1} requirements with failures'},
                 {label: '0} requirements with errors'},
                 {label: '0} requirements compromised'},
                 {label: '0} requirements untested'},
@@ -192,9 +192,9 @@
 
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
-                                    <td>5</td>
-                                    <td>5</td>
-                                    <td>0</td>
+                                    <td>12</td>
+                                    <td>11</td>
+                                    <td>1</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td></td>
@@ -223,9 +223,9 @@
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>5</td>
-            <td>5 (100%)</td>
-            <td>0 (0%)</td>
+            <td>12</td>
+            <td>11 (92%)</td>
+            <td>1 (8%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -239,15 +239,15 @@
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>5</td>
-            <td>5 (100%)</td>
-            <td>0 (0%)</td>
+            <td>12</td>
+            <td>11 (92%)</td>
+            <td>1 (8%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">5 minutes 28 seconds</td>
+                <td colspan="5">11 minutes 45 seconds</td>
         </tr>
         </body>
     </table>
@@ -274,6 +274,111 @@
                         </tr>
                         </thead>
                         <tbody>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="9c8c7271e2256e668c43af744b27b89c93e61b4657aaadbdd20bfdf707cded36.html" class="ellipsis"
+                                           title="Adicionar ao carrinho camisa sele&ccedil;&atilde;o brasileira ">
+                                            Adicionar ao carrinho camisa sele&ccedil;&atilde;o brasileira&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">6</td>
+
+
+                                <td class="lightgreentext">55.88</td>
+                            </tr>
+
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                    
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
+                                    <div class="ellipsis">
+
+                                        <a href="85d44862f637b3c6f5eba2ff1d3f1f1b55815c9964abd7ee2325b9e1eb879f7c.html" class="ellipsis"
+                                           title="Adicionar qualquer item ao carrinho e calcular frete at&eacute; o CEP da RSI Matriz Assertion error">
+                                            Adicionar qualquer item ao carrinho e calcular frete at&eacute; o CEP da RSI Matriz&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">10</td>
+
+
+                                <td class="lightgreentext">81.92</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="c029ae576a6fbbaab7067fb01319346be4e4974ae60c8ae95b90552373b429ba.html" class="ellipsis"
+                                           title="Adicionar qualquer item no carrinho, Limpar Carrinho e voltar para loja ">
+                                            Adicionar qualquer item no carrinho, Limpar Carrinho e voltar para loja&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">10</td>
+
+
+                                <td class="lightgreentext">65.65</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="861e73a9bc0b96fbcf41739d6878f7ccab9ac8f1bea129e478c7fa1c76fd7abb.html" class="ellipsis"
+                                           title="Adicionar t&ecirc;nis ao carrinho ">
+                                            Adicionar t&ecirc;nis ao carrinho&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">7</td>
+
+
+                                <td class="lightgreentext">66.56</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="8568bb2209b1c8ef5b4d1bc234509917de523a6022abe4844f33a63c123d0097.html" class="ellipsis"
+                                           title="Buscar usando CEP ">
+                                            Buscar usando CEP&nbsp;(2  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">8</td>
+
+
+                                <td class="lightgreentext">29.74</td>
+                            </tr>
 
                             <tr class="test-SUCCESS">
                                 <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
@@ -336,6 +441,27 @@
 
 
                                 <td class="lightgreentext">35.86</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="94e40a1f7e093793ce3796039ac0dddece0bc14f7e99acf31f4aef6622e1c26d.html" class="ellipsis"
+                                           title="Escolher um cal&ccedil;ado na se&ccedil;&atilde;o outlet com valor abaixo de R$150,00 ">
+                                            Escolher um cal&ccedil;ado na se&ccedil;&atilde;o outlet com valor abaixo de R$150,00&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">8</td>
+
+
+                                <td class="lightgreentext">77.66</td>
                             </tr>
 
                             <tr class="test-SUCCESS">

@@ -12,13 +12,13 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(id="acesso-busca")
 	private WebElement campoBusca;
 	
-	@FindBy(xpath="/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]")
+	@FindBy(className="ctrlcontent")
 	private WebElement resultadoBusca;
 
 	//@FindBy(linkText="[ Próxima ]")
 	private By btnProx = By.linkText("[ Próxima ]");
 	
-	@FindBy(xpath="//*[@id='content-principais-servicos']/ul/li/a")
+	@FindBy(xpath="//ul[@class='principais-servicos']/li/a")
 	private List<WebElement> principaisServicos;
 	
 	@FindBy(id="data")
@@ -42,13 +42,16 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(name="peso")
 	private WebElement selectPeso;
 	
-	@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[1]/a[2]")
+	//*[@id="spanTipoEmbalagem2"]/div/div[1]/a[2]
+	@FindBy(xpath="//span[@id='spanTipoEmbalagem2']//a[contains(text(),'Próxima')]")
 	private WebElement btnNextTipo;
 	
 	//@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div")
-	private By divTipoEmbalagem = By.xpath("//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div");
+	//*[@id="spanEmbalagemEnvelope"]/label/select
+	private By divTipoEmbalagem = 
+			By.xpath("//div[@class='container' and @style='width: 1832px;']/div[4]");
 	
-	@FindBy(xpath="//*[@id='spanTipoEmbalagem2']/div/div[2]/div/div[4]/div/p/button")
+	@FindBy(xpath="//div[@class='container' and @style='width: 1832px;']//div[@class='sheet' and position()=4]//button")
 	private WebElement btnSelecionarEmbalagem;
 	
 	@FindBy(name="Calcular")
@@ -67,7 +70,7 @@ public class PageObjectClassCorreios extends PageObject{
 	private WebElement selectBairroAgencia;
 	
 	//@FindBy(xpath= "//*[@id='tableNomeAgencia']/tbody/tr/td/a")
-	private By agencias = By.xpath("//*[@id='tableNomeAgencia']/tbody/tr/td/a");
+	private By agencias = By.xpath("//td[@class='bullet ageNomeEvent nomeAgencia']/a");
 	
 	//-------- GETTERS ---------
 	public WebElement getCampoBusca() {

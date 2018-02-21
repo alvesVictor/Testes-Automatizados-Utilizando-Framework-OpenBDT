@@ -13,5 +13,5 @@ Scenario Outline: Escolher um calçado na seção outlet com valor abaixo de R$1
 	
 
 Examples:
-	|url						|busca		|opcao	|tenis								|tam|
-	|http://www.netshoes.com.br/|outlet		|Tênis	|Tênis Diadora Mission Masculino	|41	|
+	|url						|busca		|opcao					|tenis								|tam|
+	|http://www.netshoes.com.br/|outlet		|Calçados Masculinos	|Bota GONEW Fênix Camo				|41	|

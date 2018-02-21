@@ -49,16 +49,14 @@ public class StepBusinessSouBarato {
 	public void clicarBtnCompra() {
 		viewElement.click(page.getBtnComprar());
 	}
-
-	public void confirmarCompraReembalado() {
-		viewElement.click(page.getBtnConfirmarCompraReembalado());
-	}
 	
 	public void clicarBtnContinuar() {
+		page.waitFor(3).seconds();
 		viewElement.click(page.getBtnContinuar());
 	}
 	
 	public void verificoProdutoAdd() {
+		page.waitFor(5).seconds();
 		LOG.info(page.getCampoQtdProduto().getText());
 		assumeTrue(page.element(page.getCampoQtdProduto()).containsText("1"));
 	}
@@ -85,7 +83,7 @@ public class StepBusinessSouBarato {
 		viewElement.click(geladeira);
 	}
 
-	public void confirmarCompraGeladeira() {
+	public void confirmarCompra() {
 		viewElement.click(page.getBtnConfirmarCompra());
 	}
 
