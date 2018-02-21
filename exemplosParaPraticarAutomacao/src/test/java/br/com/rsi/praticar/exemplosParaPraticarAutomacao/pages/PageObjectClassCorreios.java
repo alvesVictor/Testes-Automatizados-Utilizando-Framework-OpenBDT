@@ -15,7 +15,6 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(className="ctrlcontent")
 	private WebElement resultadoBusca;
 
-	//@FindBy(linkText="[ Próxima ]")
 	private By btnProx = By.linkText("[ Próxima ]");
 	
 	@FindBy(xpath="//ul[@class='principais-servicos']/li/a")

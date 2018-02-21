@@ -10,7 +10,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassSouBarato extends PageObject{
 
-	@FindBy(xpath="//*[@id='lightpop']/div/div[2]/a")
+	@FindBy(xpath="//div[@class='lightpop-close md-btn-visible']/a")
 	private WebElement popUpInicial;
 
 	@FindBy(xpath=" //div[@class='p-image-placeholder']/a/img")
