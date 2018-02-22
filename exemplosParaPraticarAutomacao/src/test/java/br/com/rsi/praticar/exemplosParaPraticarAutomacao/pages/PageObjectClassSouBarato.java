@@ -22,7 +22,7 @@ public class PageObjectClassSouBarato extends PageObject{
 	@FindBy(xpath="//button[@class='pure-button pure-button-buy button-large pure-button-wide']")
 	private WebElement btnContinuar;
 	
-	@FindBy(xpath="//div[@class='table-summary table-summary-basket']//td[@class='text-capitalize col-xs-8' and contains(text(),'produto')]")
+	@FindBy(xpath="//td[@class='text-capitalize col-xs-8' and contains(text(),'produto')]")
 	private WebElement campoQtdProduto;
 	
 	@FindBy(id="main-header-menu-toggle")

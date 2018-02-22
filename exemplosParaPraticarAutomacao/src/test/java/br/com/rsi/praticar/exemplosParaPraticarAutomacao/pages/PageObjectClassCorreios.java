@@ -20,6 +20,12 @@ public class PageObjectClassCorreios extends PageObject{
 	@FindBy(xpath="//ul[@class='principais-servicos']/li/a")
 	private List<WebElement> principaisServicos;
 	
+	@FindBy(xpath="//table//tr[2]/td")
+	private List<WebElement> resultadoBuscaCep;
+	
+	@FindBy(xpath="//table[@class='tmptabela']/tbody/tr")
+	private List<WebElement> resultadoBuscaNome;
+	
 	@FindBy(id="data")
 	private WebElement campoDataPostagem;
 	
@@ -150,6 +156,14 @@ public class PageObjectClassCorreios extends PageObject{
 
 	public By getAgencias() {
 		return agencias;
+	}
+
+	public List<WebElement> getResultadoBuscaCep() {
+		return resultadoBuscaCep;
+	}
+
+	public List<WebElement> getResultadoBuscaNome() {
+		return resultadoBuscaNome;
 	}
 
 	

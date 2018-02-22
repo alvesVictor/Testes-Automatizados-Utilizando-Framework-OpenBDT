@@ -39,7 +39,7 @@ public class StepBusinessCorreios {
 	public void verificarResultado(String resul) {
 		Assert.assertTrue(page.element(page.getResultadoBusca()).containsText(resul));
 		if (page.element(page.getResultadoBusca()).containsText("DADOS ENCONTRADOS COM SUCESSO.")) {
-			List<WebElement> elementos = viewElement.findElements(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td"));
+			List<WebElement> elementos = page.getResultadoBuscaCep();
 			for (WebElement end : elementos) {
 				LOG.info(end.getText());
 			}
@@ -59,19 +59,15 @@ public class StepBusinessCorreios {
 	public void verificarCeps(String resul) {
 		Assert.assertTrue(page.element(page.getResultadoBusca()).containsText(resul));
 			if (page.element(page.getResultadoBusca()).containsText("DADOS ENCONTRADOS COM SUCESSO.")) {
-				LOG.info("Entrou no if");
 				boolean clicavel;
 				do{
-					LOG.info("Entrou no doWhile");
-					List<WebElement> elementos = viewElement.findElements(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr"));
+					List<WebElement> elementos = page.getResultadoBuscaNome();
 					for(int i=0; i < elementos.size();i++){
-						//LOG.info(elementos.get(i).getText());
+						LOG.info(elementos.get(i).getText());
 					}
-					clicavel = page.element(page.getResultadoBusca()).containsElements(page.getBtnProx()) ? true:false;
-					LOG.info("podeClicar? "+clicavel);
+					clicavel = page.element(page.getResultadoBusca()).containsElements(page.getBtnProx());
 					if(clicavel){
 						viewElement.findElement(page.getBtnProx()).click();
-						//LOG.info("click");
 					}
 				}while(clicavel);
 			}
@@ -79,7 +75,6 @@ public class StepBusinessCorreios {
 
 	public void clicarNaOpcaoDeServico(String opcao) {
 		List<WebElement> elementos = page.getPrincipaisServicos();
-		//LOG.info(elementos.size());
 		for(WebElement servico: elementos){
 			if(servico.getAttribute("title").equals(opcao)){
 				viewElement.click(servico);
@@ -123,14 +118,12 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarTipoEmbalagem(String tipoEmbalagem) {
-		//LOG.info(page.getDivTipoEmbalagem());
 		while(!page.element(page.getDivTipoEmbalagem()).containsText(tipoEmbalagem)){
 			viewElement.click(page.getBtnNextTipo());
 			page.waitFor(1).seconds();
 		}
 		page.waitFor(3).seconds();
 		viewElement.click(page.getBtnSelecionarEmbalagem());
-		//viewElement.findElement(page.getDivTipoEmbalagem()).findElement(page.getBtnSelecionarEmbalagem()).click();
 	}
 
 	public void clicarBtnEnviar() {
@@ -148,7 +141,6 @@ public class StepBusinessCorreios {
 				e.findElement(By.tagName("label")).click();
 				break;
 			}
-			//LOG.info(e.getText());
 		}
 	}
 
