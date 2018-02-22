@@ -6,5 +6,5 @@ import cucumber.api.CucumberOptions;
 import io.openbdt.cucumber.CucumberWithOpenBdt;
 
 @RunWith(CucumberWithOpenBdt.class)
-@CucumberOptions(features = {"src/test/resources/bdd/features"}, glue = {"br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.definition"})
+@CucumberOptions(features = {"src/test/resources/bdd/not-run/souBarato"}, glue = {"br.com.rsi.praticar.exemplosParaPraticarAutomacao.steps.definition"})
 public class DefaultAcceptanceTestRunner {}

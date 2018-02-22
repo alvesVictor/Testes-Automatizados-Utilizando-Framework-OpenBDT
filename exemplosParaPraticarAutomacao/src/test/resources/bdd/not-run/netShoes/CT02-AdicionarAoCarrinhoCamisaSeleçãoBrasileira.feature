@@ -11,5 +11,5 @@ Scenario Outline: Adicionar ao carrinho camisa seleção brasileira
 	
 
 Examples:
-	|url						|busca						|camisa														|tam| 
-	|http://www.netshoes.com.br/|camisa seleção brasileira	|Camisa Seleção Brasil II 2016 s/nº Torcedor Nike Masculina	|P	|
+	|url						|busca						|camisa													|tam| 
+	|http://www.netshoes.com.br/|camisa seleção brasileira	|Camisa Seleção Brasil I 2016 s/nº Torcedor Nike 		|P	|
